@@ -3142,10 +3142,10 @@
     let timerInterval = null;
     let currentQuestionIndex = 0;
     let savedQuestionAnswers = {};
-    const QUESTION_DURATION_SECONDS = 30;
+    const QUIZ_DURATION_SECONDS = 60 * 60;
     const QUIZ_SETTINGS_KEY = "APPRENTISSAGE_EVALUATION_quiz_settings_v2";
     const DEFAULT_QUIZ_SETTINGS = {
-      questionCount: 50,
+      questionCount: 0,
       displayMode: "all",
       questionType: "both",
       cameraEnabled: false,
@@ -3179,13 +3179,16 @@
     }
 
     function getQuizQuestionCount() {
-      return quizSettings.questionCount;
+      return subjects[0]?.questions?.length || 0;
     }
 
     function loadQuizSettings() {
       try {
         const saved = { ...DEFAULT_QUIZ_SETTINGS, ...JSON.parse(localStorage.getItem(QUIZ_SETTINGS_KEY) || "{}") };
         saved.cameraEnabled = false;
+        saved.displayMode = "all";
+        saved.questionType = "both";
+        saved.antiCheatEnabled = true;
         return saved;
       } catch (error) {
         return { ...DEFAULT_QUIZ_SETTINGS, cameraEnabled: false };
@@ -3203,9 +3206,7 @@
     }
 
     function selectQuizQuestions(questionBank) {
-      const available = getQuestionsForSelectedType(questionBank);
-      const quantity = Math.min(Number(quizSettings.questionCount) || 15, available.length);
-      return shuffleQuestions(available).slice(0, quantity);
+      return shuffleQuestions(questionBank);
     }
 
     function getQuestionOrderSignature(questions) {
@@ -3246,7 +3247,7 @@
     };
 
     function isAntiCheatEnabled() {
-      return PAGE_EXIT_TRACKING_CONFIG.enabled && quizSettings.antiCheatEnabled !== false;
+      return PAGE_EXIT_TRACKING_CONFIG.enabled;
     }
 
     let pageExitTrackingActive = false;
@@ -3281,7 +3282,8 @@
       // Cela évite que l’ancien cache du navigateur masque le nouveau sujet.
       subjects = cloneData(CONFIG.subjects).map(subject => ({
         ...subject,
-        programmed: subject.programmed === true
+        programmed: subject.programmed === true,
+        duration: 60
       }));
       saveSubjects();
     }
@@ -3415,6 +3417,14 @@
       }
     });
 
+    ["copy", "cut", "paste"].forEach(action => {
+      document.addEventListener(action, event => {
+        if (!isQuizVisible()) return;
+        registerPageExitEvent(`Action ${action} détectée pendant la composition`, action);
+        event.preventDefault();
+      });
+    });
+
     document.addEventListener("contextmenu", (event) => {
       if (!isQuizVisible()) return;
       registerPageExitEvent("Clic droit ou menu contextuel détecté", "menu_contextuel");
@@ -3467,12 +3477,17 @@
     }
 
     function getStudentProfile() {
-      const nomComplet = getActiveMatricule() || "APPRENANT";
+      const matricule = getActiveMatricule();
+      const record = window.CODES_ACCES?.[matricule];
+      const nomComplet = record?.nom || "APPRENANT";
       return {
         nom: nomComplet,
         prenom: "",
         nomComplet,
-        matricule: nomComplet
+        matricule,
+        filiere: record?.filiere || "",
+        telephone: record?.numero || "",
+        antenne: record?.antenne || ""
       };
     }
 
@@ -3543,7 +3558,7 @@
           </div>
           <p class="student-evaluation-meta"><strong>Matière :</strong> ${escapeHTML(availableSubject.matter)}</p>
           <p class="student-evaluation-meta"><strong>Durée :</strong> ${availableSubject.duration} min</p>
-          <p class="student-evaluation-meta"><strong>Questions :</strong> ${getQuizQuestionCount()} — ${getQuizTypeLabel()} — ${quizSettings.displayMode === "all" ? "toutes sur une page" : "question par question"}</p>
+          <p class="student-evaluation-meta"><strong>Questions :</strong> ${availableSubject.questions.length} — toutes affichées sur une page</p>
           <p class="student-evaluation-meta"><strong>Fermeture :</strong> ${formatDateTime(availableSubject.closeDate, availableSubject.closeTime)}</p>
           <button class="student-start-btn" onclick="startQuickEvaluation('${availableSubject.id}')">Commencer</button>
         </div>
@@ -3554,10 +3569,12 @@
       homeView.innerHTML = `
         <div class="student-dashboard">
           <section class="student-profile-card">
-            <h2>${profile.nomComplet}</h2>
-            <p>
-              <span>Nom et Prénoms :</span> <strong>${escapeHTML(profile.nomComplet)}</strong>
-            </p>
+            <div class="student-profile-inline">
+              <span>Nom et Prénoms : <strong>${escapeHTML(profile.nomComplet)}</strong></span>
+              <span>Filière : <strong>${escapeHTML(profile.filiere || "Non renseignée")}</strong></span>
+              <span>Numéro : <strong>${escapeHTML(profile.telephone || "Non renseigné")}</strong></span>
+              <span>Antenne : <strong>${escapeHTML(profile.antenne || "Non renseignée")}</strong></span>
+            </div>
             <button class="student-scroll-btn" onclick="document.getElementById('studentAvailableSection').scrollIntoView({behavior:'smooth', block:'start'})">Mes évaluations</button>
           </section>
 
@@ -3591,83 +3608,14 @@
 
     function openQuizSettings() {
       const modal = document.getElementById("modal");
-      const max = getMaximumQuestionCount();
       modal.className = "modal";
-      modal.innerHTML = `
-        <div class="modal-content settings-modal-content">
-          <h2>⚙ Paramètres du quiz</h2>
-          <div class="settings-field">
-            <label for="settingsQuestionCount"><strong>Nombre de questions</strong></label>
-            <input id="settingsQuestionCount" type="number" min="1" max="${max}" value="${Math.min(quizSettings.questionCount, max)}">
-            <small id="settingsQuestionLimit" class="muted">Maximum disponible : ${max}</small>
-          </div>
-          <div class="settings-field">
-            <label for="settingsDisplayMode"><strong>Mode d’affichage</strong></label>
-            <select id="settingsDisplayMode">
-              <option value="one" ${quizSettings.displayMode === "one" ? "selected" : ""}>Question par question</option>
-              <option value="all" ${quizSettings.displayMode === "all" ? "selected" : ""}>Toutes les questions</option>
-            </select>
-          </div>
-          <div class="settings-field">
-            <label for="settingsQuestionType"><strong>Type de questions</strong></label>
-            <select id="settingsQuestionType" onchange="updateSettingsQuestionLimit()">
-              <option value="both" ${quizSettings.questionType === "both" ? "selected" : ""}>QCM et QCD</option>
-              <option value="qcm" ${quizSettings.questionType === "qcm" ? "selected" : ""}>QCM seulement</option>
-              <option value="qcd" ${quizSettings.questionType === "qcd" ? "selected" : ""}>QCD seulement (Vrai/Faux)</option>
-            </select>
-          </div>
-          <div class="settings-toggle-row">
-            <div>
-              <strong>Caméra</strong>
-              <small>Désactivée pour ce site.</small>
-            </div>
-            <label class="settings-switch">
-              <input id="settingsCameraEnabled" type="checkbox" disabled>
-              <span class="settings-switch-slider"></span>
-              <span class="settings-switch-state">Désactivée</span>
-            </label>
-          </div>
-          <div class="settings-toggle-row">
-            <div>
-              <strong>Anti-triche</strong>
-              <small>Détecter les sorties de page, changements d’application et raccourcis interdits.</small>
-            </div>
-            <label class="settings-switch">
-              <input id="settingsAntiCheatEnabled" type="checkbox" ${quizSettings.antiCheatEnabled !== false ? "checked" : ""}>
-              <span class="settings-switch-slider"></span>
-              <span class="settings-switch-state">${quizSettings.antiCheatEnabled !== false ? "Activé" : "Désactivé"}</span>
-            </label>
-          </div>
-          <div class="actions settings-actions">
-            <button class="btn-light" type="button" onclick="closeModal()">Annuler</button>
-            <button class="btn-green" type="button" onclick="saveQuizSettings()">Enregistrer</button>
-          </div>
-        </div>`;
-    }
-
-    function updateSettingsQuestionLimit() {
-      const type = document.getElementById("settingsQuestionType").value;
-      const max = getMaximumQuestionCount(type);
-      const input = document.getElementById("settingsQuestionCount");
-      input.max = max;
-      if (Number(input.value) > max) input.value = max;
-      document.getElementById("settingsQuestionLimit").textContent = `Maximum disponible : ${max}`;
-    }
-
-    function saveQuizSettings() {
-      const type = document.getElementById("settingsQuestionType").value;
-      const max = getMaximumQuestionCount(type);
-      const requested = Number(document.getElementById("settingsQuestionCount").value);
-      quizSettings = {
-        questionCount: Math.max(1, Math.min(max, Number.isFinite(requested) ? Math.floor(requested) : 50)),
-        displayMode: document.getElementById("settingsDisplayMode").value,
-        questionType: type,
-        cameraEnabled: false,
-        antiCheatEnabled: document.getElementById("settingsAntiCheatEnabled").checked
-      };
-      localStorage.setItem(QUIZ_SETTINGS_KEY, JSON.stringify(quizSettings));
-      closeModal();
-      renderSubjects();
+      modal.innerHTML = `<div class="modal-content settings-modal-content">
+        <h2>Paramètres de la composition</h2>
+        <p>Toutes les questions du sujet sont affichées sur une page.</p>
+        <p>Durée : 60 minutes. Le devoir est envoyé automatiquement à la fin du temps.</p>
+        <p>La surveillance des sorties de page et des actions détectables est activée.</p>
+        <button class="btn-green" type="button" onclick="closeModal()">Fermer</button>
+      </div>`;
     }
 
     function showStudentForm(subjectId) {
@@ -3721,7 +3669,7 @@
       currentQuestionIndex = 0;
       savedQuestionAnswers = {};
       renderQuiz();
-      startTimer(QUESTION_DURATION_SECONDS);
+      startTimer();
       startPageExitTracking();
     }
 
@@ -4001,6 +3949,9 @@
         nom: profile.nom,
         prenom: profile.prenom,
         matricule: profile.matricule,
+        filiere: profile.filiere,
+        antenne: profile.antenne,
+        telephone: profile.telephone,
         photo: photoData || ""
       };
       quizStartTime = new Date();
@@ -4013,7 +3964,7 @@
       currentQuestionIndex = 0;
       savedQuestionAnswers = {};
       renderQuiz();
-      startTimer(QUESTION_DURATION_SECONDS);
+      startTimer();
       startPageExitTracking();
     }
 
@@ -4029,6 +3980,8 @@
 
       if (siteHeader) siteHeader.style.display = "none";
       if (mainContent) mainContent.style.display = "none";
+      const siteFooter = document.getElementById("siteFooter");
+      if (siteFooter) siteFooter.style.display = "none";
       if (accessPage) accessPage.style.display = "flex";
       if (input) {
         input.value = "";
@@ -4071,7 +4024,7 @@
           <div class="quiz-layout quiz-layout-single">
             <div class="panel quiz-panel quiz-panel-clean">
               <div class="question-timer-top question-timer-clean">
-                <strong id="timer" class="timer question-timer">${String(Math.floor((totalQuestions * QUESTION_DURATION_SECONDS) / 60)).padStart(2, "0")}:00</strong>
+                <strong id="timer" class="timer question-timer">${"60"}:00</strong>
                 <div class="question-progress-wrap"><div id="questionProgressBar" class="question-progress-bar" style="width:100%"></div></div>
               </div>
               <form id="quizForm">
@@ -4178,26 +4131,25 @@
       }
       currentQuestionIndex++;
       renderQuiz();
-      startTimer(QUESTION_DURATION_SECONDS);
+      startTimer();
     }
 
-    function startTimer(seconds) {
-      if (quizSettings.displayMode === "all") seconds = currentSubject.questions.length * QUESTION_DURATION_SECONDS;
-      let remaining = seconds;
-      updateTimerDisplay(remaining, seconds);
+    function startTimer() {
+      const deadline = quizStartTime.getTime() + QUIZ_DURATION_SECONDS * 1000;
       clearInterval(timerInterval);
-      timerInterval = setInterval(() => {
-        remaining--;
-        updateTimerDisplay(remaining, seconds);
+      const tick = () => {
+        const remaining = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+        updateTimerDisplay(remaining, QUIZ_DURATION_SECONDS);
         if (remaining <= 0) {
           clearInterval(timerInterval);
-          if (quizSettings.displayMode === "all") submitQuiz(true);
-          else goToNextQuestion();
+          submitQuiz(true);
         }
-      }, 1000);
+      };
+      tick();
+      timerInterval = setInterval(tick, 1000);
     }
 
-    function updateTimerDisplay(seconds, totalSeconds = QUESTION_DURATION_SECONDS) {
+    function updateTimerDisplay(seconds, totalSeconds = QUIZ_DURATION_SECONDS) {
       const safeSeconds = Math.max(0, seconds);
       const min = Math.floor(safeSeconds / 60).toString().padStart(2, "0");
       const sec = (safeSeconds % 60).toString().padStart(2, "0");
