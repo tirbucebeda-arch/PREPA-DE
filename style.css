@@ -2302,15 +2302,3 @@ th {
   font-size: 14px;
   font-weight: 600;
 }
-
-.student-profile-inline {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-  color: #6b7280;
-  font-size: clamp(0.88rem, 1.9vw, 1rem);
-  line-height: 1.65;
-}
-.student-profile-inline > span { white-space: nowrap; }
-.student-profile-inline strong { color: #4b5563; font-weight: 800; }

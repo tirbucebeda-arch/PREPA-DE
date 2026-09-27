@@ -3569,12 +3569,12 @@
       homeView.innerHTML = `
         <div class="student-dashboard">
           <section class="student-profile-card">
-            <div class="student-profile-inline">
-              <span>Nom et Prénoms : <strong>${escapeHTML(profile.nomComplet)}</strong></span>
-              <span>Filière : <strong>${escapeHTML(profile.filiere || "Non renseignée")}</strong></span>
-              <span>Numéro : <strong>${escapeHTML(profile.telephone || "Non renseigné")}</strong></span>
-              <span>Antenne : <strong>${escapeHTML(profile.antenne || "Non renseignée")}</strong></span>
-            </div>
+            <p>
+              <span>Nom et Prénoms :</span> <strong>${escapeHTML(profile.nomComplet)}</strong>
+            </p>
+            <p><span>Filière :</span> <strong>${escapeHTML(profile.filiere || "Non renseignée")}</strong></p>
+            <p><span>Numéro :</span> <strong>${escapeHTML(profile.telephone || "Non renseigné")}</strong></p>
+            <p><span>Antenne :</span> <strong>${escapeHTML(profile.antenne || "Non renseignée")}</strong></p>
             <button class="student-scroll-btn" onclick="document.getElementById('studentAvailableSection').scrollIntoView({behavior:'smooth', block:'start'})">Mes évaluations</button>
           </section>
 
