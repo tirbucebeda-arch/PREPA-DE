@@ -1,0 +1,7 @@
+Modifications effectuées le 20/09/2026
+- Ajout du sujet Santé publique AS (50 questions) depuis aa.docx.
+- Matière : Santé publique.
+- 50 questions sélectionnées par défaut.
+- Affichage par défaut : toutes les questions.
+- Caméra désactivée de façon permanente.
+- Titre visible du site : SANTÉ PUBLIQUE.

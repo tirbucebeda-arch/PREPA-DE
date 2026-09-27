@@ -1,0 +1,9 @@
+CENTRALISATION DES NOTES DANS GOOGLE SHEETS
+
+1. Créer un classeur Google Sheets dédié aux résultats. Dans Extensions > Apps Script, coller le contenu de Code_Google_Apps_Script.gs et enregistrer.
+2. Déployer > Nouveau déploiement > Application Web. Exécuter en tant que : Moi. Qui a accès : Tout le monde. Autoriser les demandes Google, puis copier l'URL qui se termine par /exec.
+3. Dans resultats-config.js, placer cette URL entre les guillemets. Republier l'ensemble des fichiers du site, dont les deux nouveaux fichiers JavaScript.
+4. Faire un test réel avec un étudiant fictif. Vérifier que la ligne arrive dans la feuille Résultats et que la note correspond. Tester ensuite une composition hors ligne et la reconnexion.
+
+Sans l'URL du déploiement, les résultats sont conservés localement mais aucun envoi central n'a lieu.
+Une connexion Internet est nécessaire pour transmettre les notes. Le navigateur ne peut pas confirmer la bonne écriture dans Google Sheets à cause de la réponse opaque d'Apps Script ; contrôler la feuille après le test. Un étudiant qui modifie le code du site peut falsifier les résultats : ce système convient au suivi de révisions, pas à une certification. Le lien de réception étant public, quiconque le connaît peut poster des données ; garder l'URL discrète et ne pas diffuser de données médicales personnelles.

@@ -1,0 +1,12 @@
+Règles appliquées à tous les sujets :
+- Nombre de questions par tentative : 15 par défaut
+- Les 15 questions sont sélectionnées et mélangées aléatoirement à chaque tentative
+- Le bouton Paramètres permet de choisir le nombre de questions (de 1 au maximum disponible)
+- Modes d’affichage : question par question ou toutes les questions sur une page
+- Types disponibles : QCM seulement, QCD seulement, ou QCM et QCD
+- Temps par sujet : 30 minutes
+- Temps par question : 30 secondes
+- Bonne réponse : +1 point
+- Mauvaise réponse : -1 point
+- Pas de réponse : 0 point
+- Ces paramètres seront utilisés pour tous les nouveaux sujets ajoutés.

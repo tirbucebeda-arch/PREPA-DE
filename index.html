@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANTÉ PUBLIQUE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="accessPage" class="access-page">
+  <div class="access-shell">
+    <div class="access-card">
+      <div class="access-top">
+        <div class="access-branding no-logo">
+          <div class="access-title-wrap">
+            <h1 class="access-title">SANTÉ PUBLIQUE</h1>
+            <p class="access-subtitle">Exercices en ligne · Espace étudiant</p>
+          </div>
+        </div>
+        <div class="access-badge">Identification</div>
+      </div>
+
+      <div class="access-divider"></div>
+
+      <div class="access-body">
+        <label for="accessFullName" class="access-label">Nom et Prénoms</label>
+        <input id="accessFullName" class="access-input" type="text" placeholder="Ex : KOUASSI Jean Marc" autocomplete="name" onkeydown="if(event.key === 'Enter'){enterWithFullName();}" />
+        <p class="access-help">Saisissez votre nom et vos prénoms.</p>
+        <button onclick="enterWithFullName()" class="access-button">Accéder à mes exercices</button>
+      </div>
+    </div>
+
+    <p class="access-footer">/evaluations - base locale synchronisee</p>
+  </div>
+</div>
+
+<script>
+function enterWithFullName() {
+  const input = document.getElementById("accessFullName");
+  const fullName = input.value.trim().replace(/\s+/g, " ");
+
+  if (!fullName) {
+    alert("Veuillez entrer votre nom et vos prénoms.");
+    input.focus();
+    return;
+  }
+
+  window.activeStudentFullName = fullName;
+  localStorage.setItem("REVISION_LICENCE_1_ACTIVE_FULL_NAME", fullName);
+
+  document.getElementById("accessPage").style.display = "none";
+  document.getElementById("siteHeader").style.display = "block";
+  document.getElementById("mainContent").style.display = "block";
+
+  if (typeof showHome === 'function') {
+    showHome();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("accessFullName");
+  if (input) input.focus();
+});
+</script>
+
+<header id="siteHeader" class="student-site-header" style="display:none;">
+  <div class="container student-topbar">
+    <div class="student-topbar-title">
+      <h1>SANTÉ PUBLIQUE – Espace Étudiant</h1>
+    </div>
+    <div class="student-topbar-actions">
+      <div id="studentHeaderName" class="student-topbar-name">APPRENANT |</div>
+      <button class="student-settings-btn" onclick="openQuizSettings()">⚙ Paramètres</button>
+      <button class="student-logout-btn" onclick="logoutStudent()">Déconnexion</button>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="mainContent" style="display:none;">
+  <section id="homeView" class="student-home"></section>
+
+  <section id="quizView" class="hidden"></section>
+  <section id="resultView" class="hidden"></section>
+
+  <section id="adminView" class="panel hidden">
+    <div class="topbar">
+      <div>
+        <h2>Espace ADMIN</h2>
+        <p class="muted">Ajoute, modifie ou supprime les sujets. Les changements sont sauvegardés automatiquement.</p>
+      </div>
+      <div class="actions">
+        <button class="btn-green" onclick="openSubjectEditor()">+ Ajouter un sujet</button>
+        <button class="btn-orange" onclick="resetDefaultSubjects()">Réinitialiser les sujets par défaut</button>
+        <button class="btn-light" onclick="showHome()">Retour étudiant</button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button onclick="renderAdminSubjects()">Sujets</button>
+      <button onclick="renderAdminResults()">Résultats</button>
+    </div>
+    <div id="adminContent"></div>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden"></div>
+
+<script src="neuro-subjects.js"></script>
+<script src="resultats-config.js"></script>
+<script src="resultats-envoi.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
