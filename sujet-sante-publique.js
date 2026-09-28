@@ -107,8 +107,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "La communauté participe à l’évaluation de ses activités ; les techniciens peuvent l’aider à organiser le recueil et l’analyse des résultats.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 108, participation communautaire à l’évaluation.",
-        "answer": "Par la communauté avec la collaboration des techniciens",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "Par la communauté avec la collaboration des techniciens"
       },
       {
         "type": "qcm",
@@ -120,8 +119,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "L’observation repère les caractéristiques du milieu ; le dialogue permet de comprendre les besoins et les priorités exprimés par les habitants.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 22, étude du milieu.",
-        "answer": "L’observation et le dialogue",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "L’observation et le dialogue"
       },
       {
         "type": "qcm",
@@ -134,8 +132,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Certains vaccins liquides perdent leur efficacité en cas de gel. Leur position dans le réfrigérateur doit limiter ce risque. Une pastille de contrôle surveille notamment l’exposition à la chaleur.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 67–69, chaîne du froid.",
-        "answer": "La congélation",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "La congélation"
       },
       {
         "type": "qcm",
@@ -151,8 +148,7 @@ window.PREPA_SUBJECTS = [
         "answers": [
           "Mettre en place des comités de gestion pour participer à la gestion locale",
           "Rendre les médicaments essentiels disponibles dans les centres de santé"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -168,8 +164,7 @@ window.PREPA_SUBJECTS = [
         "answers": [
           "Le coût élevé des soins empêchant les plus démunis de se soigner correctement",
           "Le désintérêt de populations insuffisamment associées aux décisions de santé"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -184,8 +179,7 @@ window.PREPA_SUBJECTS = [
         "answers": [
           "Un volet curatif caractérisé notamment par la gratuité des soins",
           "Un volet préventif de lutte contre les grandes endémies"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -197,8 +191,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Niveau périphérique : exécution ; niveau intermédiaire : appui ; niveau central : fonctions politiques et stratégiques.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 104.",
-        "answer": "Trois niveaux",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "Trois niveaux"
       },
       {
         "type": "qcm",
@@ -215,8 +208,7 @@ window.PREPA_SUBJECTS = [
           "Un dispositif d’injection",
           "Un dispositif de collecte des déchets",
           "Un dispositif de destruction des déchets issus des soins"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -232,8 +224,7 @@ window.PREPA_SUBJECTS = [
         "answers": [
           "Les clients",
           "Les agents de santé"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -250,8 +241,7 @@ window.PREPA_SUBJECTS = [
         "answers": [
           "Les cyclones",
           "Les tremblements de terre"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -270,8 +260,7 @@ window.PREPA_SUBJECTS = [
           "Un accident industriel majeur",
           "Un acte de terrorisme",
           "Une guerre civile"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -283,8 +272,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Questionnaire et guide d’entretien sont préparés pour recueillir des réponses ; le carnet sert surtout au suivi individuel, même s’il peut être consulté comme source de données.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 25–29, données de l’étude du milieu ; distinction appliquée à la question.",
-        "answer": "Un carnet de santé",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "Un carnet de santé"
       },
       {
         "type": "qcm",
@@ -296,8 +284,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le cours indique 3 gouttes pour 10 litres d’eau claire et 6 pour 10 litres d’eau trouble. Ce dosage suppose le produit envisagé par le support et ne s’applique pas à n’importe quelle concentration.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 88, javellisation.",
-        "answer": "6 gouttes",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "6 gouttes"
       },
       {
         "type": "qcm",
@@ -309,8 +296,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "C’est la durée indiquée dans le cours, avant de laisser reposer l’eau.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 87, ébullition.",
-        "answer": "10 à 15 minutes",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "10 à 15 minutes"
       },
       {
         "type": "qcm",
@@ -324,8 +310,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "A à D reproduisent la liste exacte. La sécurité peut être une finalité souhaitable, mais n’est pas un cinquième objectif dans cette liste.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 90, objectifs de l’hygiène du milieu.",
-        "answer": "Assurer la sécurité des personnes",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "Assurer la sécurité des personnes"
       },
       {
         "type": "qcm",
@@ -343,8 +328,7 @@ window.PREPA_SUBJECTS = [
           "Le stockage",
           "Le ramassage",
           "Le traitement"
-        ],
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        ]
       },
       {
         "type": "qcm",
@@ -356,8 +340,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le cours distingue transmission biologique, avec développement de l’agent dans le vecteur, et transmission mécanique, avec transport sans ce développement.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 98.",
-        "answer": "La transmission génétique",
-        "caseContext": "Étude de cas A\nSongori est un village de 5 000 habitants en 2011, avec un taux d’accroissement annuel de 3,8 %. En 2013, on relève 155 cas de paludisme chez les enfants de 0 à 5 ans, dont 26 décès.\nVingt-cinq pour cent des enfants de 0 à 11 mois ont contracté une affection diarrhéique, notamment en lien avec l’hygiène nutritionnelle, l’insalubrité et le manque d’eau potable. La rupture des sels de réhydratation orale leur a été préjudiciable.\nPour la question 3, les 155 cas représentent tous les cas présents au moment de l’étude. Arrondir la population totale à l’entier le plus proche. Pour planifier les activités, arrondir l’effectif des enfants de 0 à 11 mois à l’entier supérieur."
+        "answer": "La transmission génétique"
       },
       {
         "type": "qcm",
@@ -437,8 +420,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Formule du TGF : naissances vivantes ÷ femmes en âge de reproduction × facteur de présentation. Leur effectif est donc le dénominateur.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 38, TGF.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -449,8 +431,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Des déplacements peuvent mettre en contact des groupes ayant des expositions différentes. Ils peuvent favoriser une transmission, sans provoquer nécessairement une épidémie.",
         "source": "COUR DE DEMOGRAPHIE L2 INFAS 2025-2026docx-1 (2)(1).pdf, p. 21, migration ; SANTE PUBLIQUE L1.pdf, p. 110–112, déterminants.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -461,8 +442,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Ils mesurent la situation et les changements. Des résultats insuffisants peuvent conduire à ajuster activités et priorités.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 19–20 et p. 14.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -473,8 +453,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Il tient compte du solde naturel et du solde migratoire ; l’accroissement naturel seul ne tient compte que des naissances moins les décès.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 39.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -485,8 +464,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Il faut identifier une maladie précise et apprécier son augmentation par rapport au niveau attendu, en fonction de la période et des seuils applicables.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 113 ; Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), reproduction de SANTÉ PUBLIQUE L1.pdf, p. 119–120.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -497,8 +475,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Une analyse et une priorisation précèdent le choix d’une réponse ; une activité ou l’adaptation d’un programme existant peut suffire.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 14–15.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -509,8 +486,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Formule : accroissement naturel = naissances − décès. À naissances constantes, davantage de décès réduisent cet accroissement.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 39.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -521,8 +497,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Il rapporte les naissances vivantes à l’effectif des femmes en âge de reproduction.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 38.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -533,8 +508,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Une projection est une estimation fondée sur une hypothèse de croissance ; les événements réels peuvent s’en écarter.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 40.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -545,8 +519,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Elle décrit la fréquence et la répartition d’un phénomène selon les personnes, le lieu et le temps, sans prouver seule sa cause.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 111–112.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -557,8 +530,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le phénomène de masse suppose un regroupement de sujets partageant un caractère épidémiologique dans le temps ou l’espace ; un cas isolé ne suffit pas.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 113–114.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -569,8 +541,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Un cas isolé peut être détecté. Il peut justifier une alerte, sans signifier que de nombreuses personnes sont déjà malades.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 113 ; Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), reproduction de SANTÉ PUBLIQUE L2.pdf, p. 95.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -581,8 +552,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Il sert à analyser la situation présente, comparer et mesurer les changements dans le temps.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 19–20.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -593,8 +563,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "L’analyse cherche pourquoi la maladie survient et se propage, notamment en étudiant ses facteurs de transmission.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 111–112.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -605,8 +574,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Formule du bilan : population finale = initiale + naissances − décès + immigrations − émigrations. Seul l’accroissement naturel ignore les migrations.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 39.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -617,8 +585,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "La description mesure et répartit ; l’analyse recherche les associations avec les facteurs de risque. Une association ne prouve pas à elle seule la causalité.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 111–112.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -629,8 +596,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "On ajoute les naissances et arrivées à l’effectif initial, puis on retire les décès et départs. L’exactitude exige des données exhaustives.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 39–40, variation et projection ; formule fournie dans la question.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -641,8 +607,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Les cas partagent un caractère épidémiologique dans le temps ; cela attire l’attention, mais ne prouve pas automatiquement une épidémie.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 113.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -653,8 +618,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Formule : TBN = naissances vivantes ÷ population de référence × facteur de présentation. Le nombre de naissances est seulement le numérateur.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 38.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -665,8 +629,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "La population de référence figure au dénominateur du TBN.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 38.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -677,8 +640,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le nombre des naissances est rapporté à la population correspondante pour produire un taux.",
         "source": "Epidemiologie_cours_integraux_L1_L2.pdf (reproduction de SANTÉ PUBLIQUE L2.pdf), p. 38.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -689,8 +651,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "L’axe analytique étudie précisément les facteurs associés aux problèmes de santé.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 112.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -701,8 +662,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Après la description de qui, où et quand, l’analyse examine pourquoi le phénomène survient.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 112.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -713,8 +673,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le cours cite le salaire du gérant du dépôt comme besoin opérationnel pouvant être couvert ; l’autorisation de chaque dépense dépend des règles de gestion.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 105.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -725,8 +684,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le cours cite le salaire du gérant, mais cela n’établit pas un salaire versé aux membres du comité du seul fait de leur appartenance.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 105 ; règles détaillées de rémunération du COGES non précisées dans ce passage.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -737,8 +695,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le schéma nomme les versants prestataire et gestionnaire ; stratégique décrit une fonction du niveau central, pas le nom du second versant.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 108.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -749,8 +706,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Il faut utiliser le diluant assigné au vaccin concerné par son fabricant. Composition et volume ne sont pas nécessairement interchangeables.",
         "source": "OMS, Guidance note: Vaccine diluents, 2015 : https://www.who.int/publications/i/item/WHO-IVB-15.08, section sur le choix du diluant ; passage INFAS précis non retrouvé.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -761,8 +717,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Le vaccin sec reçoit son diluant spécifiquement assigné, dans le volume prévu, pour préparer la dose à administrer.",
         "source": "OMS, Guidance note: Vaccine diluents, 2015 : https://www.who.int/publications/i/item/WHO-IVB-15.08, reconstitution des vaccins ; passage INFAS précis non retrouvé.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -773,8 +728,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Un circuit clair oriente les personnes depuis l’accueil vers la vaccination puis la sortie, sans imposer deux portes dans chaque local.",
         "source": "Principe d’organisation pratique ; page précise non retrouvée dans les cours INFAS consultés.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -785,8 +739,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "La position de l’enfant et l’aménagement de l’espace doivent réduire le contact avec les objets piquants ; les objets utilisés vont dans la boîte de sécurité.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 64–66.",
-        "answer": "Faux",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Faux"
       },
       {
         "type": "qcd",
@@ -797,8 +750,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Cette proximité permet l’hygiène des mains au moment approprié sans quitter inutilement le poste.",
         "source": "Principe d’hygiène de la séance ; emplacement précis non retrouvé dans les cours INFAS consultés.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       },
       {
         "type": "qcd",
@@ -809,8 +761,7 @@ window.PREPA_SUBJECTS = [
         ],
         "correction": "Formule : vaccinées correctement ÷ population cible × 100. 150 ÷ 200 × 100 = 75 %. Les 200 sont explicitement définies comme population cible.",
         "source": "SANTE PUBLIQUE L1.pdf, p. 115, calcul d’une proportion ; population cible précisée dans la question.",
-        "answer": "Vrai",
-        "caseContext": "Étude de cas B\nVous menez une étude du milieu à Akouré, dans la sous-préfecture d’Oglwapo. La population est de 3 500 habitants au 31 décembre 2016 et son taux d’accroissement annuel est de 3,5 %. Les enfants de 0 à 11 mois ne sont pas correctement vaccinés contre le DTC-HepB-Hib en raison d’une rupture liée à une mauvaise estimation des besoins.\nPour les questions 26 à 28, l’infirmier prépare les doses pour un trimestre de 2018. Les enfants estimés pour l’année sont répartis uniformément entre quatre trimestres et chacun doit recevoir trois doses. Dans cet exercice, les pertes et le stock disponible sont nuls ; le stock de sécurité représente 25 % du besoin théorique trimestriel. Arrondir chaque quantité de doses à l’entier supérieur.\nLes hypothèses relatives au trimestre, aux pertes, au stock disponible et au taux de 25 % ont été ajoutées pour rendre les calculs possibles ; ce taux n’est pas présenté comme une norme de vaccination."
+        "answer": "Vrai"
       }
     ]
   }
