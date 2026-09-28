@@ -4785,7 +4785,7 @@ window.CODES_ACCES = {
   "KK500": {
     "nom": "KOUADIO KOUAME NOEL",
     "filiere": "IDE",
-    "numero": "0708192500",
+    "numero": "0768192500",
     "antenne": "ABENGOUROU"
   },
   "YS158": {
@@ -5453,5 +5453,107 @@ window.CODES_ACCES = {
     "filiere": "IDE",
     "numero": "0749727044",
     "antenne": "ABENGOUROU"
+  },
+  "NG600": {
+    "nom": "N'TAKPE GISELLE",
+    "filiere": "IDE",
+    "numero": "0544558600",
+    "antenne": "ABIDJAN"
+  },
+  "AA302": {
+    "nom": "AHIEN AMA ROLANDE MURIELLE",
+    "filiere": "SFM",
+    "numero": "0758837302",
+    "antenne": "ABENGOUROU"
+  },
+  "TA952": {
+    "nom": "TEYA ABENAN ISABELLE",
+    "filiere": "SFM",
+    "numero": "0708518952",
+    "antenne": "ABENGOUROU"
+  },
+  "KA783": {
+    "nom": "KRA AMENAN PÉLAGIE",
+    "filiere": "SFM",
+    "numero": "0779607783",
+    "antenne": "ABENGOUROU"
+  },
+  "OB985": {
+    "nom": "OUATTARA BINTOU YIRÉ ÉPOUSE OUATTARA",
+    "filiere": "IDE",
+    "numero": "0787874985",
+    "antenne": "ABENGOUROU"
+  },
+  "LM195": {
+    "nom": "LOUA MARIUS",
+    "filiere": "IDE",
+    "numero": "0768148195",
+    "antenne": "ABENGOUROU"
+  },
+  "DN861": {
+    "nom": "DJAPONON NIANGORAN BLANDINE",
+    "filiere": "SFM",
+    "numero": "0102074861",
+    "antenne": "ABENGOUROU"
+  },
+  "AY308": {
+    "nom": "ABOU YAWA ANGE-LAURA",
+    "filiere": "SFM",
+    "numero": "0749713308",
+    "antenne": "ABENGOUROU"
+  },
+  "OE797": {
+    "nom": "OGOU ELLOH ARMAND",
+    "filiere": "IDE",
+    "numero": "0546793797",
+    "antenne": "ABENGOUROU"
+  },
+  "YR250": {
+    "nom": "YAPAUD RICHMOND ISAAC",
+    "filiere": "IDE",
+    "numero": "0787104250",
+    "antenne": "ABENGOUROU"
+  },
+  "AG269": {
+    "nom": "AYE GRÂCE",
+    "filiere": "SFM",
+    "numero": "0778254269",
+    "antenne": "ABENGOUROU"
+  },
+  "GK961": {
+    "nom": "GUEHOU KLEDJEZON EMMANUELLA",
+    "filiere": "SFM",
+    "numero": "0172013961",
+    "antenne": "ABOISSO"
+  },
+  "KT054": {
+    "nom": "KONE TAFEBE HUSSEIN",
+    "filiere": "IDE",
+    "numero": "0101012054",
+    "antenne": "ABENGOUROU"
+  },
+  "NA572": {
+    "nom": "N'GUESSAN ASSIBA MORIELLE",
+    "filiere": "SFM",
+    "numero": "0759318572",
+    "antenne": "ABIDJAN"
+  },
+  "KA588": {
+    "nom": "KOUASSI AKOUA ABOKO MARIE JEANNE",
+    "filiere": "IDE",
+    "numero": "0777795588",
+    "antenne": "ABENGOUROU"
+  },
+  "NE082": {
+    "nom": "NANDON EPSE AMANI MOSSOCHI HORLINE",
+    "filiere": "IDE",
+    "numero": "0748559082",
+    "antenne": "ABOISSO"
+  },
+  "KA327": {
+    "nom": "Konan Ahou Larissa Mathilde",
+    "filiere": "SFM",
+    "numero": "0778084327",
+    "antenne": "BOUAKÉ"
   }
 };

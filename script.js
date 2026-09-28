@@ -7,10 +7,10 @@
 
     const CONFIG = {
       defaultMarking: { correct: 1, wrong: -1, empty: 0 },
-      subjects: []
+      subjects: window.PREPA_SUBJECTS || []
     };
 
-    const STORAGE_SUBJECTS = "PREPA_DE_subjects_v2";
+    const STORAGE_SUBJECTS = "PREPA_DE_subjects_v3";
     const STORAGE_RESULTS = "NEUROCHIRURGIE_L3_results_v1";
     const STORAGE_ATTEMPTS = "NEUROCHIRURGIE_L3_attempts_v1";
 
@@ -1098,6 +1098,7 @@
           studentAnswer,
           correctAnswer,
           correction: q.correction || q.explanation || "",
+          source: q.source || "",
           state
         });
       });
@@ -1232,6 +1233,7 @@
             <p><strong>Réponse donnée :</strong> ${a.studentAnswer ? escapeHTML(a.studentAnswer) : "Aucune réponse"}</p>
             <p><strong>Bonne réponse :</strong> ${escapeHTML(a.correctAnswer)}</p>
             ${a.correction ? `<p><strong>Explication :</strong> ${escapeHTML(a.correction)}</p>` : `<p><strong>Explication :</strong> La bonne réponse est ${escapeHTML(a.correctAnswer)}.</p>`}
+            ${a.source ? `<p><strong>Source :</strong> ${escapeHTML(a.source)}</p>` : ""}
           </div>
         `}).join("")}
       `;
@@ -1579,6 +1581,8 @@
           <input value="${escapeAttr(q.answer)}" oninput="updateQuestionField(${index}, 'answer', this.value)">
           <label>Correction / explication à afficher après le résultat</label>
           <textarea oninput="updateQuestionField(${index}, 'correction', this.value)">${escapeHTML(q.correction || "")}</textarea>
+          <label>Source de la correction</label>
+          <textarea oninput="updateQuestionField(${index}, 'source', this.value)">${escapeHTML(q.source || "")}</textarea>
         </div>
       `).join("") || `<p class="muted">Aucune question. Clique sur “Ajouter une question”.</p>`;
     }
