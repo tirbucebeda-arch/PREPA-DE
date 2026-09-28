@@ -4058,8 +4058,8 @@ window.CODES_ACCES = {
   },
   "AA147": {
     "nom": "ATSE ATSE GUY SERGE",
-    "filiere": "Non renseignée",
-    "numero": "0143277147",
+    "filiere": "IDE",
+    "numero": "0768247384",
     "antenne": "ABENGOUROU"
   },
   "NY924": {
@@ -5555,5 +5555,143 @@ window.CODES_ACCES = {
     "filiere": "SFM",
     "numero": "0778084327",
     "antenne": "BOUAKÉ"
+  },
+  "EG910": {
+    "nom": "EHOUNOU GOLY ARSÈNE VINCENT",
+    "filiere": "IDE",
+    "numero": "0596169910",
+    "antenne": "ABENGOUROU"
+  },
+  "MN246": {
+    "nom": "MAGBLI NOUBOKA SYPRIENNE",
+    "filiere": "IDE",
+    "numero": "0788408246",
+    "antenne": "ABENGOUROU"
+  },
+  "MY608": {
+    "nom": "ME YAO FLORENT ARISTIDE",
+    "filiere": "IDE",
+    "numero": "0716447608",
+    "antenne": "ABENGOUROU"
+  },
+  "KE957": {
+    "nom": "KINI EHUI ALLOU LAETITIA",
+    "filiere": "SFM",
+    "numero": "0555792957",
+    "antenne": "ABENGOUROU"
+  },
+  "SA192": {
+    "nom": "SINAN AMA AMINANDOU BÉNÉDICTE",
+    "filiere": "IDE",
+    "numero": "0759502192",
+    "antenne": "ABENGOUROU"
+  },
+  "TA711": {
+    "nom": "TOLO AMINATA",
+    "filiere": "IDE",
+    "numero": "0556539711",
+    "antenne": "ABENGOUROU"
+  },
+  "BF781": {
+    "nom": "Brou florence",
+    "filiere": "SFM",
+    "numero": "0173187781",
+    "antenne": "BOUAKE"
+  },
+  "AK605": {
+    "nom": "ASSANDE KOUADIO JEAN ARNAUD",
+    "filiere": "IDE",
+    "numero": "0566604605",
+    "antenne": "ABENGOUROU"
+  },
+  "HH232": {
+    "nom": "HIEN HERIE NICOLE",
+    "filiere": "SFM",
+    "numero": "0564358232",
+    "antenne": "ABENGOUROU"
+  },
+  "BA279": {
+    "nom": "BOKA AMON MARIE ZITA",
+    "filiere": "IDE",
+    "numero": "0758215279",
+    "antenne": "ABENGOUROU"
+  },
+  "DA272": {
+    "nom": "DJANGBA ANDRE KANGAH",
+    "filiere": "IDE",
+    "numero": "0759816272",
+    "antenne": "ABENGOUROU"
+  },
+  "DH387": {
+    "nom": "Diakite Hamed",
+    "filiere": "IDE",
+    "numero": "0769313387",
+    "antenne": "ABENGOUROU"
+  },
+  "BE562": {
+    "nom": "BOHOUN EUNICE HADASSA",
+    "filiere": "IDE",
+    "numero": "0787258562",
+    "antenne": "ABENGOUROU"
+  },
+  "DA959": {
+    "nom": "DJATTO AMAN TATA GRACE BÉNÉDICTE",
+    "filiere": "IDE",
+    "numero": "0101580959",
+    "antenne": "ABENGOUROU"
+  },
+  "BM252": {
+    "nom": "BOKO MARIE IRENE",
+    "filiere": "SFM",
+    "numero": "0749350252",
+    "antenne": "ABENGOUROU"
+  },
+  "BA024": {
+    "nom": "BROU ASSI ROMARIC GILDAS",
+    "filiere": "IDE",
+    "numero": "0142062024",
+    "antenne": "ABENGOUROU"
+  },
+  "NO048": {
+    "nom": "N’TAKPE OVO ARLETTE TATIANA",
+    "filiere": "IDE",
+    "numero": "0576667048",
+    "antenne": "ABOISSO"
+  },
+  "CK618": {
+    "nom": "COMOE KABLAN ARSENE",
+    "filiere": "IDE",
+    "numero": "0749086618",
+    "antenne": "ABENGOUROU"
+  },
+  "KA101": {
+    "nom": "KOTCHI AIMÉE DÉSIRÉE",
+    "filiere": "IDE",
+    "numero": "0152632101",
+    "antenne": "ABENGOUROU"
+  },
+  "BB558": {
+    "nom": "BOUAFO BOSSON FIDÈLE",
+    "filiere": "IDE",
+    "numero": "0555593558",
+    "antenne": "ABENGOUROU"
+  },
+  "HI790": {
+    "nom": "HIEN INI NADÈGE",
+    "filiere": "IDE",
+    "numero": "0747705790",
+    "antenne": "ABENGOUROU"
+  },
+  "NM018": {
+    "nom": "NEGUI MLAN ANNICK LYDIE",
+    "filiere": "IDE",
+    "numero": "0720783018",
+    "antenne": "ABENGOUROU"
+  },
+  "AD805": {
+    "nom": "AKAFFOU DIVINE GRÂCE",
+    "filiere": "IDE",
+    "numero": "0748572805",
+    "antenne": "ABENGOUROU"
   }
 };
