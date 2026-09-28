@@ -5543,17 +5543,5 @@ window.CODES_ACCES = {
     "filiere": "IDE",
     "numero": "0777795588",
     "antenne": "ABENGOUROU"
-  },
-  "NE082": {
-    "nom": "NANDON EPSE AMANI MOSSOCHI HORLINE",
-    "filiere": "IDE",
-    "numero": "0748559082",
-    "antenne": "ABOISSO"
-  },
-  "KA327": {
-    "nom": "Konan Ahou Larissa Mathilde",
-    "filiere": "SFM",
-    "numero": "0778084327",
-    "antenne": "BOUAKÉ"
   }
 };
