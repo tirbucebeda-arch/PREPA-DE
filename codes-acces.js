@@ -1266,6 +1266,12 @@ window.CODES_ACCES = {
     "numero": "0747594785",
     "antenne": "ABENGOUROU"
   },
+  "BB886": {
+    "nom": "BEDA BEDA",
+    "filiere": "IDE",
+    "numero": "0708190886",
+    "antenne": "ABENGOUROU"
+  },
   "BC747": {
     "nom": "BEDA CHIEPO CHRISTELLE",
     "filiere": "Non renseignée",
@@ -1938,6 +1944,12 @@ window.CODES_ACCES = {
     "numero": "0707704580",
     "antenne": "ABENGOUROU"
   },
+  "DE682": {
+    "nom": "DJA ESTHER ELISABETH",
+    "filiere": "SFM",
+    "numero": "0789897682",
+    "antenne": "ABENGOUROU"
+  },
   "DK144": {
     "nom": "DJAHA KOFFI STEPHANE",
     "filiere": "IDE",
@@ -2485,8 +2497,8 @@ window.CODES_ACCES = {
     "antenne": "ABENGOUROU"
   },
   "GC133": {
-    "nom": "GOUMO CLARISSE",
-    "filiere": "Non renseignée",
+    "nom": "GOUMO GNISSAN MASSA CLARISSE",
+    "filiere": "IDE",
     "numero": "0719363133",
     "antenne": "ABENGOUROU"
   },
@@ -4548,6 +4560,12 @@ window.CODES_ACCES = {
     "numero": "0747793225",
     "antenne": "ABENGOUROU"
   },
+  "NG380": {
+    "nom": "N'GBE BOMO MELAINE",
+    "filiere": "IDE",
+    "numero": "0717946380",
+    "antenne": "ABENGOUROU"
+  },
   "NM972": {
     "nom": "N'GBODY MOYA Jeannette Stéphanie",
     "filiere": "Non renseignée",
@@ -5272,6 +5290,12 @@ window.CODES_ACCES = {
     "nom": "SIE Lydie",
     "filiere": "Non renseignée",
     "numero": "0778147843",
+    "antenne": "ABENGOUROU"
+  },
+  "SA054": {
+    "nom": "SIKA AKOUN JEANNETTE",
+    "filiere": "SFM",
+    "numero": "0594045054",
     "antenne": "ABENGOUROU"
   },
   "SH095": {
