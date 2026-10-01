@@ -10,7 +10,7 @@
       subjects: window.PREPA_SUBJECTS || []
     };
 
-    const STORAGE_SUBJECTS = "PREPA_DE_subjects_v6";
+    const STORAGE_SUBJECTS = "PREPA_DE_subjects_v8";
     const STORAGE_RESULTS = "NEUROCHIRURGIE_L3_results_v1";
     const STORAGE_ATTEMPTS = "NEUROCHIRURGIE_L3_attempts_v1";
 

@@ -762,6 +762,12 @@ window.CODES_ACCES = {
     "numero": "0747955950",
     "antenne": "ABENGOUROU"
   },
+  "AS965": {
+    "nom": "ANGUI SOPIE CHRISTELLE",
+    "antenne": "ABOISSO",
+    "filiere": "IDE",
+    "numero": "0788995965"
+  },
   "AE935": {
     "nom": "ANIN EPIE ROSEMONDE",
     "filiere": "Non renseignée",
@@ -1386,6 +1392,12 @@ window.CODES_ACCES = {
     "numero": "0759318500",
     "antenne": "ABOISSO"
   },
+  "BL677": {
+    "nom": "BIONAO LYNA CARNELLE",
+    "antenne": "ABOISSO",
+    "filiere": "IDE",
+    "numero": "0709275677"
+  },
   "BO374": {
     "nom": "BITIE ODETTE",
     "filiere": "Non renseignée",
@@ -1590,6 +1602,12 @@ window.CODES_ACCES = {
     "numero": "0749880248",
     "antenne": "ABENGOUROU"
   },
+  "BB143": {
+    "nom": "BOUSSOU BROU MIREILLE ELODIE",
+    "antenne": "ABOISSO",
+    "filiere": "IDE",
+    "numero": "0546363143"
+  },
   "BK768": {
     "nom": "BOUSSOU KOUADIO TAKIA BLANCHE EDWIGE",
     "filiere": "SFM",
@@ -1631,6 +1649,12 @@ window.CODES_ACCES = {
     "filiere": "IDE",
     "numero": "0142062024",
     "antenne": "ABENGOUROU"
+  },
+  "BA100": {
+    "nom": "Brou Aya Florence",
+    "antenne": "BOUAKÉ",
+    "filiere": "SFM",
+    "numero": "0584765100"
   },
   "BC811": {
     "nom": "BROU CHIA THULIA PARIANA",
@@ -2190,6 +2214,12 @@ window.CODES_ACCES = {
     "numero": "0564523193",
     "antenne": "ABENGOUROU"
   },
+  "EM233": {
+    "nom": "EkISSI marie France Dominique",
+    "antenne": "BOUAKÉ",
+    "filiere": "SFM",
+    "numero": "0173923233"
+  },
   "ES452": {
     "nom": "EKISSI SOPI RUTH",
     "filiere": "Non renseignée",
@@ -2609,6 +2639,12 @@ window.CODES_ACCES = {
     "filiere": "Non renseignée",
     "numero": "0748769697",
     "antenne": "ABENGOUROU"
+  },
+  "IB096": {
+    "nom": "IRIE BI TRA ARNAUD",
+    "antenne": "ABOISSO",
+    "filiere": "IDE",
+    "numero": "0709694096"
   },
   "IL397": {
     "nom": "IRIE LOU FAIYE AUDREY",
@@ -3306,6 +3342,12 @@ window.CODES_ACCES = {
     "numero": "07499461551",
     "antenne": "ABENGOUROU"
   },
+  "KC460": {
+    "nom": "Koné claignere aicha",
+    "antenne": "BOUAKÉ",
+    "filiere": "SFM",
+    "numero": "0787582460"
+  },
   "KK284": {
     "nom": "KONE KAFFO VANESSA INES",
     "filiere": "Non renseignée",
@@ -3533,6 +3575,12 @@ window.CODES_ACCES = {
     "filiere": "IDE",
     "numero": "0596879106",
     "antenne": "ABENGOUROU"
+  },
+  "KK425": {
+    "nom": "KOUADIO KOBENA NOEL",
+    "antenne": "ABENGOUROU",
+    "filiere": "IDE",
+    "numero": "0574747425"
   },
   "KK476": {
     "nom": "KOUADIO KOFFI BERNADIN",
@@ -3965,6 +4013,12 @@ window.CODES_ACCES = {
     "filiere": "Non renseignée",
     "numero": "0748944678",
     "antenne": "ABENGOUROU"
+  },
+  "KA357": {
+    "nom": "KOUASSI Amoin Rachel",
+    "antenne": "BOUAKÉ",
+    "filiere": "SFM",
+    "numero": "0747575357"
   },
   "KA557": {
     "nom": "KOUASSI AMOUAN RUTH",
@@ -4560,6 +4614,12 @@ window.CODES_ACCES = {
     "numero": "0747793225",
     "antenne": "ABENGOUROU"
   },
+  "NG462": {
+    "nom": "N'GAZA N'DA FREDERIC",
+    "antenne": "ABENGOUROU",
+    "filiere": "IDE",
+    "numero": "0140659462"
+  },
   "NG380": {
     "nom": "N'GBE BOMO MELAINE",
     "filiere": "IDE",
@@ -4920,6 +4980,12 @@ window.CODES_ACCES = {
     "numero": "0767783475",
     "antenne": "ABENGOUROU"
   },
+  "OA147": {
+    "nom": "OUATTARA AÏCHA",
+    "antenne": "ABENGOUROU",
+    "filiere": "IDE",
+    "numero": "0505025147"
+  },
   "OA635": {
     "nom": "OUATTARA AKOUA ROSALIE",
     "filiere": "IDE",
@@ -5256,6 +5322,12 @@ window.CODES_ACCES = {
     "numero": "0777886928",
     "antenne": "ABENGOUROU"
   },
+  "SF850": {
+    "nom": "SEYE FATOU",
+    "antenne": "ABENGOUROU",
+    "filiere": "IDE",
+    "numero": "0789724850"
+  },
   "SE790": {
     "nom": "SHEP ERI THÉRÈSE",
     "filiere": "IDE",
@@ -5390,7 +5462,7 @@ window.CODES_ACCES = {
   },
   "SK278": {
     "nom": "SOUMAHORO KARIDJA",
-    "filiere": "Non renseignée",
+    "filiere": "IDE",
     "numero": "0720678278",
     "antenne": "ABENGOUROU"
   },
@@ -5778,6 +5850,12 @@ window.CODES_ACCES = {
     "numero": "0140327525",
     "antenne": "ABENGOUROU"
   },
+  "YA957": {
+    "nom": "YA AYA ROSELINE",
+    "antenne": "ABOISSO",
+    "filiere": "IDE",
+    "numero": "0714848957"
+  },
   "YA943": {
     "nom": "YACOUBA AKA DANIEL",
     "filiere": "IDE",
@@ -5957,6 +6035,12 @@ window.CODES_ACCES = {
     "filiere": "SFM",
     "numero": "0767478148",
     "antenne": "Aboisso"
+  },
+  "YN100": {
+    "nom": "Yao N'GUETTIA berenger",
+    "antenne": "ABENGOUROU",
+    "filiere": "IDE",
+    "numero": "0758717100"
   },
   "YS037": {
     "nom": "YAO STEPHANIE ELLA",
@@ -6275,5 +6359,17 @@ window.CODES_ACCES = {
     "filiere": "Non renseignée",
     "numero": "0584855086",
     "antenne": "ABENGOUROU"
+  },
+  "AY054": {
+    "nom": "Amon Yves",
+    "antenne": "ABENGOUROU",
+    "filiere": "SFM",
+    "numero": "0594045054"
+  },
+  "AY274": {
+    "nom": "Amon Yves",
+    "antenne": "MAN",
+    "filiere": "IDE",
+    "numero": "0556652274"
   }
 };
