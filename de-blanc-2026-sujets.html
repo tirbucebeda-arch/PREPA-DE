@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <script>
+// Relais de session pour les sites ouverts depuis un dossier local (file://).
+(() => {
+  'use strict';
+  // Keep local-folder navigation usable when the browser denies Web Storage.
+  for (const storageName of ['localStorage', 'sessionStorage']) {
+    try {
+      const storage = window[storageName];
+      storage.setItem('__revision_probe__', '1');
+      storage.removeItem('__revision_probe__');
+    } catch (_) {
+      const values = new Map();
+      const storage = {
+        getItem: key => values.has(String(key)) ? values.get(String(key)) : null,
+        setItem: (key, value) => values.set(String(key), String(value)),
+        removeItem: key => values.delete(String(key)),
+        clear: () => values.clear(),
+        key: index => Array.from(values.keys())[index] || null,
+        get length() { return values.size; }
+      };
+      try { Object.defineProperty(window, storageName, { configurable: true, value: storage }); } catch (_) {}
+    }
+  }
+  const KEY = 'revision-hub-session-v1';
+  const PARAM = 'hubSession';
+  const parse = value => { try { return JSON.parse(value || 'null'); } catch (_) { return null; } };
+  function encode(session) {
+    try {
+      const json = JSON.stringify({ code: String(session?.code || ''), name: String(session?.name || 'Étudiant'), phone: String(session?.phone || ''), createdAt: Number(session?.createdAt) || Date.now() });
+      return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+    } catch (_) { return ''; }
+  }
+  function decode(token) {
+    try {
+      const value = String(token || '').replace(/-/g, '+').replace(/_/g, '/');
+      const json = decodeURIComponent(escape(atob(value + '='.repeat((4 - value.length % 4) % 4))));
+      const session = JSON.parse(json);
+      return session?.code ? session : null;
+    } catch (_) { return null; }
+  }
+  const url = new URL(location.href);
+  const incomingToken = url.searchParams.get(PARAM) || '';
+  const incomingSession = decode(incomingToken);
+  if (incomingSession) { try { localStorage.setItem(KEY, JSON.stringify(incomingSession)); } catch (_) {} }
+  let stored = null;
+  try { stored = parse(localStorage.getItem(KEY)); } catch (_) {}
+  let session = incomingSession || stored;
+  const token = incomingToken || encode(session);
+  function getSession() {
+    try { return parse(localStorage.getItem(KEY)) || session; } catch (_) { return session; }
+  }
+  function withSession(raw) {
+    const target = new URL(raw, location.href);
+    const current = getSession();
+    if (current?.code) target.searchParams.set(PARAM, encode(current));
+    return target.href;
+  }
+  window.RevisionSessionBridge = Object.freeze({ getSession, encode, token,
+    clear: () => { session = null; },
+    navigate: raw => { location.href = withSession(raw); }
+  });
+  document.addEventListener('click', event => {
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    const raw = link.getAttribute('href') || '';
+    if (!raw || raw.startsWith('#')) return;
+    const target = new URL(raw, location.href);
+    if (target.origin !== location.origin || !target.pathname.endsWith('.html')) return;
+    link.href = withSession(raw);
+  }, true);
+  if (incomingToken && history.replaceState) {
+    url.searchParams.delete(PARAM);
+    try { history.replaceState(null, '', url.href); } catch (_) {}
+  }
+  function propagate() {
+    if (!token) return;
+    document.querySelectorAll('a[href]').forEach(link => {
+      const raw = link.getAttribute('href') || '';
+      if (!raw || raw.includes(PARAM + '=') || ['#', 'http:', 'https:', 'mailto:', 'tel:', 'javascript:'].some(prefix => raw.startsWith(prefix))) return;
+      const file = raw.split('#')[0].split('?')[0].toLowerCase();
+      if (!file.endsWith('.html')) return;
+      try { const target = new URL(raw, location.href); target.searchParams.set(PARAM, token); link.href = target.href; } catch (_) {}
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', propagate, { once: true }); else propagate();
+})();
+
+</script>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sujets D.E. blanc 2026</title>
+  <link rel="icon" href="icone-l3-192.png">
+  <style>
+    :root{font-family:Arial,sans-serif;color:#123;background:#f3f7fb}body{margin:0}.top{background:#075985;color:#fff;padding:18px}.top a{color:#fff}.wrap{max-width:1000px;margin:auto;padding:18px}.note,.group{background:#fff;border-radius:14px;padding:16px;margin:14px 0;box-shadow:0 4px 18px #0f172a15}.group h2{margin-top:0;color:#075985}.city{border-top:1px solid #dbe5ee;padding-top:12px;margin-top:12px}.links{display:flex;flex-wrap:wrap;gap:8px}.links a{display:inline-block;background:#e0f2fe;color:#075985;text-decoration:none;font-weight:700;padding:10px 12px;border-radius:9px}.tag{font-size:.8rem;background:#0f766e;color:white;border-radius:99px;padding:3px 8px;margin-left:5px}@media(max-width:600px){.links a{width:100%;box-sizing:border-box}}
+  </style>
+<style>
+/* Mention légale commune de la plateforme */
+.legal-floating-link{
+  position:fixed;right:14px;bottom:14px;z-index:9998;
+  display:inline-flex;align-items:center;gap:7px;padding:9px 12px;
+  border:1px solid rgba(12,74,110,.22);border-radius:999px;
+  background:rgba(255,255,255,.96);color:#0c4a6e;text-decoration:none;
+  font:800 12px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  box-shadow:0 8px 28px rgba(15,35,50,.18);backdrop-filter:blur(8px)
+}
+.legal-floating-link:hover,.legal-floating-link:focus-visible{background:#0c4a6e;color:#fff;outline:none}
+.legal-login-note{margin:12px 0 0;padding:11px 12px;border-radius:12px;background:#f6f9fb;border:1px solid #d7e4e8;color:#526875;font-size:12px;line-height:1.5;text-align:center}
+.legal-login-note a{color:#0c4a6e;font-weight:850}
+.legal-modal-backdrop{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:18px;background:rgba(8,28,40,.72);backdrop-filter:blur(5px)}
+.legal-modal{width:min(620px,100%);max-height:min(86vh,760px);overflow:auto;background:#fff;border-radius:22px;padding:24px;box-shadow:0 28px 90px rgba(0,0,0,.38);color:#173042;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.legal-modal h2{margin:0 0 10px;color:#0c4a6e;font-size:clamp(23px,4vw,32px)}
+.legal-modal p{margin:9px 0;color:#526875;line-height:1.6}
+.legal-modal strong{color:#173042}
+.legal-modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.legal-modal-actions a,.legal-modal-actions button{flex:1 1 190px;border-radius:12px;padding:12px 14px;text-align:center;font-weight:900;cursor:pointer;text-decoration:none}
+.legal-modal-actions a{border:1px solid #c8d8df;background:#fff;color:#0c4a6e}
+.legal-modal-actions button{border:0;background:linear-gradient(135deg,#0c4a6e,#0f766e);color:#fff}
+.legal-page-body{margin:0;min-height:100vh;background:linear-gradient(145deg,#eaf3f6,#f8fbfc 55%,#e6f1ef);color:#173042;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.legal-page-wrap{width:min(920px,calc(100% - 28px));margin:28px auto;padding:clamp(20px,4vw,42px);background:#fff;border:1px solid #d7e4e8;border-radius:24px;box-shadow:0 22px 65px rgba(14,45,61,.16)}
+.legal-page-wrap h1{margin:0 0 8px;color:#0c4a6e;font-size:clamp(28px,5vw,46px)}
+.legal-page-wrap h2{margin:28px 0 8px;color:#0f766e;font-size:22px}
+.legal-page-wrap p,.legal-page-wrap li{line-height:1.7;color:#405866}
+.legal-page-wrap .legal-highlight{padding:15px 17px;border-left:5px solid #0f766e;border-radius:12px;background:#eef8f6;color:#244c4a;font-weight:700}
+.legal-page-wrap .legal-warning{padding:15px 17px;border-left:5px solid #a45b08;border-radius:12px;background:#fff7e8;color:#6b440f}
+.legal-page-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.legal-page-actions a{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:900}
+.legal-page-actions .back{background:#0c4a6e;color:#fff}.legal-page-actions .pdf{background:#fff;border:1px solid #b9cbd2;color:#0f766e}
+.legal-small{font-size:12px;color:#71828c!important;margin-top:28px!important}
+@media(max-width:600px){.legal-floating-link{right:8px;bottom:8px;padding:8px 10px;font-size:11px}.legal-modal{padding:19px;border-radius:18px}.legal-page-wrap{margin:14px auto;border-radius:18px}}
+
+#siteCredit{padding:12px 16px 44px;text-align:center;color:#0c4a6e;font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+body:has(#chooserPanel:not(.hidden)) .page{min-height:calc(100svh - 56px);padding-top:12px;padding-bottom:8px}
+body:has(#chooserPanel:not(.hidden)) #siteCredit{padding:4px 12px 30px;font-size:11px}
+@media print{#siteCredit{padding:10px;color:#000}}
+
+</style></head>
+<body>
+<header class="top"><a href="quiz-promo-p8.html?portal=de-blanc">← Retour au portail D.E. blanc</a><h1>Sujets DIPLÔME D'ÉTAT BLANC 2026</h1><p>Classement par matière, ville et filière.</p></header>
+<main class="wrap">
+  <div class="note"><strong>Utilisation :</strong> choisissez la matière, puis la ville et la filière. Le document s’ouvre directement à la première page de l’épreuve concernée.</div>
+  <section class="group"><h2>Chirurgie</h2>
+    <div class="city"><h3>Agboville <span class="tag">IDE</span></h3><div class="links"><a href="de-blanc-2026-agboville-ide.pdf#page=1">Ouvrir le sujet</a></div></div>
+    <div class="city"><h3>Daloa <span class="tag">IDE</span></h3><div class="links"><a href="de-blanc-2026-daloa-ide.pdf#page=1">Ouvrir le sujet</a></div></div>
+    <div class="city"><h3>Korhogo <span class="tag">IDE</span></h3><div class="links"><a href="de-blanc-2026-korhogo-ide.pdf#page=1">Ouvrir le sujet</a></div></div>
+  </section>
+  <section class="group"><h2>Médecine</h2>
+    <div class="city"><h3>Agboville <span class="tag">IDE</span></h3><div class="links"><a href="de-blanc-2026-agboville-ide.pdf#page=4">Ouvrir le sujet</a></div></div>
+    <div class="city"><h3>Daloa <span class="tag">IDE</span></h3><div class="links"><a href="de-blanc-2026-daloa-ide.pdf#page=11">Ouvrir le sujet</a></div></div>
+    <div class="city"><h3>Korhogo <span class="tag">IDE</span></h3><div class="links"><a href="de-blanc-2026-korhogo-ide.pdf#page=11">Ouvrir le sujet</a></div></div>
+  </section>
+  <section class="group"><h2>Pédiatrie</h2>
+    <div class="city"><h3>Agboville</h3><div class="links"><a href="de-blanc-2026-agboville-ide.pdf#page=9">IDE</a><a href="de-blanc-2026-agboville-sfm.pdf#page=5">SFM</a></div></div>
+    <div class="city"><h3>Daloa</h3><div class="links"><a href="de-blanc-2026-daloa-ide.pdf#page=17">IDE</a><a href="de-blanc-2026-daloa-sfm.pdf#page=1">SFM</a></div></div>
+    <div class="city"><h3>Korhogo</h3><div class="links"><a href="de-blanc-2026-korhogo-ide.pdf#page=17">IDE</a><a href="de-blanc-2026-korhogo-sfm.pdf#page=10">SFM</a></div></div>
+  </section>
+  <section class="group"><h2>Santé publique</h2>
+    <div class="city"><h3>Agboville</h3><div class="links"><a href="de-blanc-2026-agboville-ide.pdf#page=13">IDE</a><a href="de-blanc-2026-agboville-sfm.pdf#page=12">SFM</a></div></div>
+    <div class="city"><h3>Daloa</h3><div class="links"><a href="de-blanc-2026-daloa-ide.pdf#page=21">IDE</a><a href="de-blanc-2026-daloa-sfm.pdf#page=5">SFM</a></div></div>
+    <div class="city"><h3>Korhogo</h3><div class="links"><a href="de-blanc-2026-korhogo-ide.pdf#page=23">IDE</a><a href="de-blanc-2026-korhogo-sfm.pdf#page=16">SFM</a></div></div>
+  </section>
+  <section class="group"><h2>Gynécologie-obstétrique</h2>
+    <div class="city"><h3>Agboville <span class="tag">SFM</span></h3><div class="links"><a href="de-blanc-2026-agboville-sfm.pdf#page=1">Ouvrir le sujet</a></div></div>
+    <div class="city"><h3>Korhogo <span class="tag">SFM</span></h3><div class="links"><a href="de-blanc-2026-korhogo-sfm.pdf#page=1">Ouvrir le sujet</a></div></div>
+  </section>
+  <section class="group"><h2>SSR / Planification familiale</h2>
+    <div class="city"><h3>Agboville <span class="tag">SFM</span></h3><div class="links"><a href="de-blanc-2026-agboville-sfm.pdf#page=9">Ouvrir le sujet</a></div></div>
+    <div class="city"><h3>Korhogo <span class="tag">SFM</span></h3><div class="links"><a href="de-blanc-2026-korhogo-sfm.pdf#page=23">Ouvrir le sujet</a></div></div>
+  </section>
+</main>
+<script>
+(() => {
+  'use strict';
+  const LEGAL_ACK_KEY = 'revision-l3-legal-ack-v1';
+
+  function addFloatingLink() {
+    if (document.body?.classList.contains('legal-page-body')) return;
+    if (document.querySelector('.legal-floating-link')) return;
+    const link = document.createElement('a');
+    link.className = 'legal-floating-link';
+    link.href = 'droits-auteur.html';
+    link.setAttribute('aria-label', "Consulter les droits d’auteur et l’avertissement");
+    link.innerHTML = '🛡️ Droits d’auteur';
+    document.body.appendChild(link);
+  }
+
+  function showInitialWarning() {
+    const path = (location.pathname || '').toLowerCase();
+    const isPortal = path.endsWith('/') || path.endsWith('/index.html') || path === '';
+    if (!isPortal || localStorage.getItem(LEGAL_ACK_KEY) === '1') return;
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'legal-modal-backdrop';
+    backdrop.setAttribute('role', 'dialog');
+    backdrop.setAttribute('aria-modal', 'true');
+    backdrop.setAttribute('aria-labelledby', 'legalModalTitle');
+    backdrop.innerHTML = `
+      <section class="legal-modal">
+        <h2 id="legalModalTitle">Droits d’auteur et avertissement</h2>
+        <p><strong>Cette plateforme est destinée uniquement à la révision éducative et pédagogique.</strong> Elle ne doit pas être revendue ni exploitée à des fins commerciales.</p>
+        <p>Les sujets, exercices, cours, images et fichiers PDF appartiennent à leurs auteurs, enseignants, établissements, éditeurs ou propriétaires respectifs. Toute demande justifiée de retrait sera prise en compte.</p>
+        <p>La structure, l’interface, le code original, l’organisation et les adaptations propres à la plateforme sont protégés. Leur copie, suppression des mentions, revente ou redistribution non autorisée est interdite.</p>
+        <div class="legal-modal-actions">
+          <a href="droits-auteur.html">Lire le texte complet</a>
+          <button type="button" id="legalAcceptButton">J’ai compris</button>
+        </div>
+      </section>`;
+    document.body.appendChild(backdrop);
+    const button = document.getElementById('legalAcceptButton');
+    button?.focus();
+    button?.addEventListener('click', () => {
+      localStorage.setItem(LEGAL_ACK_KEY, '1');
+      backdrop.remove();
+    });
+  }
+
+  function init() {
+    addFloatingLink();
+    showInitialWarning();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+  else init();
+})();
+
+// Signature commune du site.
+(function(){
+ function addCredit(){
+  if(document.getElementById('siteCredit'))return;
+  const footer=document.createElement('footer');footer.id='siteCredit';
+  footer.textContent='Tirbuce Beda dit le COCOTIER 0708190886';
+  document.body.appendChild(footer);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addCredit,{once:true});else addCredit();
+})();
+
+</script></body></html>

@@ -1,0 +1,259 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#075985"><title>Étude de cas PEDIATRIE L1-L2-L3</title><link rel="manifest" href="manifest.webmanifest"><style>
+
+:root{--ink:#172d3c;--muted:#667985;--bg:#eef4f6;--paper:#fff;--blue:#075985;--cyan:#0e7490;--teal:#0f766e;--green:#15803d;--red:#b42318;--amber:#a15c00;--line:#d7e3e8;--shadow:0 12px 32px rgba(23,45,60,.11);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select{font:inherit}button,a{touch-action:manipulation}a{color:inherit}.hidden{display:none!important}
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;padding:10px 18px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.brand{display:flex;align-items:center;gap:10px;min-width:250px}.brand-logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-weight:950}.brand strong{display:block;color:var(--blue)}.brand small{display:block;color:var(--muted)}.topnav{margin-left:auto;display:flex;gap:7px;align-items:center;flex-wrap:wrap}.navlink,.ghost,.primary{border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 12px;text-decoration:none;font-weight:750;color:var(--ink);cursor:pointer}.navlink:hover,.ghost:hover{border-color:var(--teal)}.navlink.active,.primary{border-color:var(--teal);background:var(--teal);color:#fff}.primary:disabled{opacity:.5;cursor:not-allowed}.danger{color:var(--red)}
+.wrap{width:min(1180px,100%);margin:auto;padding:22px}.hero{padding:28px;border-radius:24px;background:linear-gradient(135deg,#075985,#0f766e);color:#fff;box-shadow:var(--shadow);margin-bottom:18px}.hero h1{margin:0 0 9px;font-size:clamp(27px,5vw,45px)}.hero p{margin:0;max-width:850px;line-height:1.6;opacity:.92}.stats{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.stat{padding:8px 11px;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.13);border-radius:999px;font-weight:750;font-size:14px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin-bottom:17px}.panel h2,.panel h3{margin-top:0}.muted{color:var(--muted)}.notice{padding:12px 14px;border-radius:12px;background:#fff7d6;border:1px solid #efd477;color:#6c5200;line-height:1.5}.grid{display:grid;gap:15px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.field{display:grid;gap:6px}.field label{font-size:13px;font-weight:850;color:var(--muted)}.field select,.field input{width:100%;border:1px solid #b9ccd4;border-radius:11px;padding:11px 12px;background:#fff;outline:none}.field select:focus,.field input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,118,110,.12)}
+.crop-stack{display:grid;gap:9px}.crop{position:relative;overflow:hidden;width:100%;background:#fff;border:1px solid #dce6ea;border-radius:10px}.crop img{position:absolute;max-width:none;height:auto;user-select:none;-webkit-user-drag:none}.crop::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.02)}
+.badge{display:inline-flex;align-items:center;border-radius:999px;padding:5px 9px;background:#e7f1f5;color:var(--blue);font-size:12px;font-weight:850}.badge.green{background:#e8f6ed;color:var(--green)}.badge.amber{background:#fff1d5;color:var(--amber)}.badge.red{background:#ffebe9;color:var(--red)}
+.toast{position:fixed;left:50%;bottom:22px;z-index:100;transform:translate(-50%,120px);opacity:0;background:#14313f;color:#fff;padding:11px 15px;border-radius:11px;box-shadow:var(--shadow);transition:.2s}.toast.show{transform:translate(-50%,0);opacity:1}
+@media(max-width:760px){.topbar{padding:8px 10px}.brand{min-width:auto}.brand small{display:none}.topnav .optional{display:none}.wrap{padding:13px}.hero{padding:21px}.panel{padding:15px}.grid.two,.grid.three{grid-template-columns:1fr}.navlink,.ghost,.primary{padding:8px 9px;font-size:14px}}
+
+</style><style>.case-pages{display:grid;gap:14px}.case-page{background:#dfe7ea;padding:10px;border-radius:13px}.case-page img{display:block;width:min(100%,850px);margin:auto;box-shadow:0 8px 25px rgba(0,0,0,.18)}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}</style><style id="revision-hub-pediatrie-style">
+.revision-hub-pediatrie{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;background:#082f49;color:#fff;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:13px;position:relative;z-index:9999}
+.revision-hub-pediatrie .hub-left,.revision-hub-pediatrie .hub-right{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.revision-hub-pediatrie a,.revision-hub-pediatrie button{border:1px solid rgba(255,255,255,.55);border-radius:9px;padding:7px 10px;background:#fff;color:#075985;text-decoration:none;font:inherit;font-weight:800;cursor:pointer}.revision-hub-pediatrie button{background:transparent;color:#fff}.revision-hub-pediatrie .hub-user{font-weight:800}@media(max-width:640px){.revision-hub-pediatrie{align-items:flex-start;flex-direction:column}.revision-hub-pediatrie .hub-left,.revision-hub-pediatrie .hub-right{width:100%}.revision-hub-pediatrie a,.revision-hub-pediatrie button{flex:1;text-align:center}}
+</style>
+  <style>
+/* Mention légale commune de la plateforme */
+.legal-floating-link{
+  position:fixed;right:14px;bottom:14px;z-index:9998;
+  display:inline-flex;align-items:center;gap:7px;padding:9px 12px;
+  border:1px solid rgba(12,74,110,.22);border-radius:999px;
+  background:rgba(255,255,255,.96);color:#0c4a6e;text-decoration:none;
+  font:800 12px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  box-shadow:0 8px 28px rgba(15,35,50,.18);backdrop-filter:blur(8px)
+}
+.legal-floating-link:hover,.legal-floating-link:focus-visible{background:#0c4a6e;color:#fff;outline:none}
+.legal-login-note{margin:12px 0 0;padding:11px 12px;border-radius:12px;background:#f6f9fb;border:1px solid #d7e4e8;color:#526875;font-size:12px;line-height:1.5;text-align:center}
+.legal-login-note a{color:#0c4a6e;font-weight:850}
+.legal-modal-backdrop{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:18px;background:rgba(8,28,40,.72);backdrop-filter:blur(5px)}
+.legal-modal{width:min(620px,100%);max-height:min(86vh,760px);overflow:auto;background:#fff;border-radius:22px;padding:24px;box-shadow:0 28px 90px rgba(0,0,0,.38);color:#173042;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.legal-modal h2{margin:0 0 10px;color:#0c4a6e;font-size:clamp(23px,4vw,32px)}
+.legal-modal p{margin:9px 0;color:#526875;line-height:1.6}
+.legal-modal strong{color:#173042}
+.legal-modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.legal-modal-actions a,.legal-modal-actions button{flex:1 1 190px;border-radius:12px;padding:12px 14px;text-align:center;font-weight:900;cursor:pointer;text-decoration:none}
+.legal-modal-actions a{border:1px solid #c8d8df;background:#fff;color:#0c4a6e}
+.legal-modal-actions button{border:0;background:linear-gradient(135deg,#0c4a6e,#0f766e);color:#fff}
+.legal-page-body{margin:0;min-height:100vh;background:linear-gradient(145deg,#eaf3f6,#f8fbfc 55%,#e6f1ef);color:#173042;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.legal-page-wrap{width:min(920px,calc(100% - 28px));margin:28px auto;padding:clamp(20px,4vw,42px);background:#fff;border:1px solid #d7e4e8;border-radius:24px;box-shadow:0 22px 65px rgba(14,45,61,.16)}
+.legal-page-wrap h1{margin:0 0 8px;color:#0c4a6e;font-size:clamp(28px,5vw,46px)}
+.legal-page-wrap h2{margin:28px 0 8px;color:#0f766e;font-size:22px}
+.legal-page-wrap p,.legal-page-wrap li{line-height:1.7;color:#405866}
+.legal-page-wrap .legal-highlight{padding:15px 17px;border-left:5px solid #0f766e;border-radius:12px;background:#eef8f6;color:#244c4a;font-weight:700}
+.legal-page-wrap .legal-warning{padding:15px 17px;border-left:5px solid #a45b08;border-radius:12px;background:#fff7e8;color:#6b440f}
+.legal-page-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.legal-page-actions a{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:900}
+.legal-page-actions .back{background:#0c4a6e;color:#fff}.legal-page-actions .pdf{background:#fff;border:1px solid #b9cbd2;color:#0f766e}
+.legal-small{font-size:12px;color:#71828c!important;margin-top:28px!important}
+@media(max-width:600px){.legal-floating-link{right:8px;bottom:8px;padding:8px 10px;font-size:11px}.legal-modal{padding:19px;border-radius:18px}.legal-page-wrap{margin:14px auto;border-radius:18px}}
+
+#siteCredit{padding:12px 16px 44px;text-align:center;color:#0c4a6e;font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+body:has(#chooserPanel:not(.hidden)) .page{min-height:calc(100svh - 56px);padding-top:12px;padding-bottom:8px}
+body:has(#chooserPanel:not(.hidden)) #siteCredit{padding:4px 12px 30px;font-size:11px}
+@media print{#siteCredit{padding:10px;color:#000}}
+
+</style>
+</head><body><script>
+// Relais de session pour les sites ouverts depuis un dossier local (file://).
+(() => {
+  'use strict';
+  // Keep local-folder navigation usable when the browser denies Web Storage.
+  for (const storageName of ['localStorage', 'sessionStorage']) {
+    try {
+      const storage = window[storageName];
+      storage.setItem('__revision_probe__', '1');
+      storage.removeItem('__revision_probe__');
+    } catch (_) {
+      const values = new Map();
+      const storage = {
+        getItem: key => values.has(String(key)) ? values.get(String(key)) : null,
+        setItem: (key, value) => values.set(String(key), String(value)),
+        removeItem: key => values.delete(String(key)),
+        clear: () => values.clear(),
+        key: index => Array.from(values.keys())[index] || null,
+        get length() { return values.size; }
+      };
+      try { Object.defineProperty(window, storageName, { configurable: true, value: storage }); } catch (_) {}
+    }
+  }
+  const KEY = 'revision-hub-session-v1';
+  const PARAM = 'hubSession';
+  const parse = value => { try { return JSON.parse(value || 'null'); } catch (_) { return null; } };
+  function encode(session) {
+    try {
+      const json = JSON.stringify({ code: String(session?.code || ''), name: String(session?.name || 'Étudiant'), phone: String(session?.phone || ''), createdAt: Number(session?.createdAt) || Date.now() });
+      return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+    } catch (_) { return ''; }
+  }
+  function decode(token) {
+    try {
+      const value = String(token || '').replace(/-/g, '+').replace(/_/g, '/');
+      const json = decodeURIComponent(escape(atob(value + '='.repeat((4 - value.length % 4) % 4))));
+      const session = JSON.parse(json);
+      return session?.code ? session : null;
+    } catch (_) { return null; }
+  }
+  const url = new URL(location.href);
+  const incomingToken = url.searchParams.get(PARAM) || '';
+  const incomingSession = decode(incomingToken);
+  if (incomingSession) { try { localStorage.setItem(KEY, JSON.stringify(incomingSession)); } catch (_) {} }
+  let stored = null;
+  try { stored = parse(localStorage.getItem(KEY)); } catch (_) {}
+  let session = incomingSession || stored;
+  const token = incomingToken || encode(session);
+  function getSession() {
+    try { return parse(localStorage.getItem(KEY)) || session; } catch (_) { return session; }
+  }
+  function withSession(raw) {
+    const target = new URL(raw, location.href);
+    const current = getSession();
+    if (current?.code) target.searchParams.set(PARAM, encode(current));
+    return target.href;
+  }
+  window.RevisionSessionBridge = Object.freeze({ getSession, encode, token,
+    clear: () => { session = null; },
+    navigate: raw => { location.href = withSession(raw); }
+  });
+  document.addEventListener('click', event => {
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    const raw = link.getAttribute('href') || '';
+    if (!raw || raw.startsWith('#')) return;
+    const target = new URL(raw, location.href);
+    if (target.origin !== location.origin || !target.pathname.endsWith('.html')) return;
+    link.href = withSession(raw);
+  }, true);
+  if (incomingToken && history.replaceState) {
+    url.searchParams.delete(PARAM);
+    try { history.replaceState(null, '', url.href); } catch (_) {}
+  }
+  function propagate() {
+    if (!token) return;
+    document.querySelectorAll('a[href]').forEach(link => {
+      const raw = link.getAttribute('href') || '';
+      if (!raw || raw.includes(PARAM + '=') || ['#', 'http:', 'https:', 'mailto:', 'tel:', 'javascript:'].some(prefix => raw.startsWith(prefix))) return;
+      const file = raw.split('#')[0].split('?')[0].toLowerCase();
+      if (!file.endsWith('.html')) return;
+      try { const target = new URL(raw, location.href); target.searchParams.set(PARAM, token); link.href = target.href; } catch (_) {}
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', propagate, { once: true }); else propagate();
+})();
+
+</script>
+<script id="revision-hub-pediatrie-guard">
+(function(){
+  'use strict';
+  const KEY='revision-hub-session-v1';
+  const session=window.RevisionSessionBridge?.getSession()||null;
+  window.PEDIATRIE_HUB_SESSION=session||{name:'Étudiant',code:'ACCES-ACCUEIL'};
+})();
+</script>
+<div class="revision-hub-pediatrie" id="revisionHubPediatrie">
+  <div class="hub-left"><a href="index.html">← Choisir un autre site</a><span class="hub-user" id="revisionHubPediatrieUser">Étudiant</span></div>
+  <div class="hub-right"><button type="button" id="revisionHubPediatrieLogout">Déconnexion</button></div>
+</div>
+<script id="revision-hub-pediatrie-controls">
+document.addEventListener('DOMContentLoaded',function(){
+  const session=window.PEDIATRIE_HUB_SESSION||{};
+  const user=document.getElementById('revisionHubPediatrieUser');
+  if(user) user.textContent='👤 '+(session.name||'Étudiant');
+  const logout=document.getElementById('revisionHubPediatrieLogout');
+  if(logout) logout.addEventListener('click',function(){
+    localStorage.removeItem('revision-hub-session-v1');
+    localStorage.removeItem('quizPromoSession');
+    sessionStorage.removeItem('sp-site-access-v3');
+    sessionStorage.removeItem('sp-site-account-v3');
+    location.href='index.html';
+  });
+});
+</script><header class="topbar"><div class="brand"><div class="brand-logo">C</div><div><strong>Étude de cas</strong><small>Démarche de soins infirmiers</small></div></div><nav class="topnav"><a class="navlink" href="pediatrie.html">Document</a><a class="navlink" href="pediatrie-quiz.html">Quiz</a><a class="navlink optional" href="pediatrie-qroc.html">QROC</a><a class="navlink active" href="pediatrie-cas.html">Étude de cas</a></nav></header><main class="wrap"><section class="hero"><h1>Cas clinique de Thermalys</h1><p>Démarche diagnostique, diagnostic infirmier, besoins fondamentaux et plan de soins.</p><div class="stats"><span class="stat">Énoncé page 79</span><span class="stat">Corrigé pages 152 à 154</span></div></section><section class="panel"><div class="tabs"><button class="primary" id="statementBtn">Énoncé</button><button class="ghost" id="answerBtn">Corrigé complet</button></div><div id="casePages" class="case-pages"></div></section></main><script>
+
+window.PedApp=(()=>{
+ const PAGE_W=595.32;
+ const pathFor=p=>`page-${String(p).padStart(3,'0')}.webp`;
+ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+ function renderSegments(container,segments,{link=true}={}){
+   container.innerHTML='';
+   const pages=[...new Set((segments||[]).map(s=>s.page))];
+   if(!pages.length)return;
+   pages.forEach(p=>{
+     const a=document.createElement('a');a.className='ghost';a.href=`document-pediatrie.pdf#page=${p}`;a.target='_blank';a.rel='noopener';a.textContent=`Voir la page ${p} du PDF`;container.appendChild(a);
+   });
+ }
+ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+ function toast(msg){let el=document.getElementById('toast');if(!el){el=document.createElement('div');el.id='toast';el.className='toast';document.body.appendChild(el)}el.textContent=msg;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2300)}
+ function fmtDate(iso){try{return new Intl.DateTimeFormat('fr-FR',{dateStyle:'short',timeStyle:'short'}).format(new Date(iso))}catch{return iso}}
+ return{PAGE_W,pathFor,esc,renderSegments,shuffle,toast,fmtDate};
+})();
+
+</script><script>const box=document.getElementById('casePages');function show(pages,answer){box.innerHTML='';pages.forEach(p=>{const d=document.createElement('a');d.className='case-page';d.href=`index.html#page-${p}`;d.innerHTML=`<img loading="lazy" src="${PedApp.pathFor(p)}" alt="Page ${p}">`;box.appendChild(d)});document.getElementById('statementBtn').className=answer?'ghost':'primary';document.getElementById('answerBtn').className=answer?'primary':'ghost'}document.getElementById('statementBtn').onclick=()=>show([79],false);document.getElementById('answerBtn').onclick=()=>show([152,153,154],true);show([79],false);</script>  <script>
+(() => {
+  'use strict';
+  const LEGAL_ACK_KEY = 'revision-l3-legal-ack-v1';
+
+  function addFloatingLink() {
+    if (document.body?.classList.contains('legal-page-body')) return;
+    if (document.querySelector('.legal-floating-link')) return;
+    const link = document.createElement('a');
+    link.className = 'legal-floating-link';
+    link.href = 'droits-auteur.html';
+    link.setAttribute('aria-label', "Consulter les droits d’auteur et l’avertissement");
+    link.innerHTML = '🛡️ Droits d’auteur';
+    document.body.appendChild(link);
+  }
+
+  function showInitialWarning() {
+    const path = (location.pathname || '').toLowerCase();
+    const isPortal = path.endsWith('/') || path.endsWith('/index.html') || path === '';
+    if (!isPortal || localStorage.getItem(LEGAL_ACK_KEY) === '1') return;
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'legal-modal-backdrop';
+    backdrop.setAttribute('role', 'dialog');
+    backdrop.setAttribute('aria-modal', 'true');
+    backdrop.setAttribute('aria-labelledby', 'legalModalTitle');
+    backdrop.innerHTML = `
+      <section class="legal-modal">
+        <h2 id="legalModalTitle">Droits d’auteur et avertissement</h2>
+        <p><strong>Cette plateforme est destinée uniquement à la révision éducative et pédagogique.</strong> Elle ne doit pas être revendue ni exploitée à des fins commerciales.</p>
+        <p>Les sujets, exercices, cours, images et fichiers PDF appartiennent à leurs auteurs, enseignants, établissements, éditeurs ou propriétaires respectifs. Toute demande justifiée de retrait sera prise en compte.</p>
+        <p>La structure, l’interface, le code original, l’organisation et les adaptations propres à la plateforme sont protégés. Leur copie, suppression des mentions, revente ou redistribution non autorisée est interdite.</p>
+        <div class="legal-modal-actions">
+          <a href="droits-auteur.html">Lire le texte complet</a>
+          <button type="button" id="legalAcceptButton">J’ai compris</button>
+        </div>
+      </section>`;
+    document.body.appendChild(backdrop);
+    const button = document.getElementById('legalAcceptButton');
+    button?.focus();
+    button?.addEventListener('click', () => {
+      localStorage.setItem(LEGAL_ACK_KEY, '1');
+      backdrop.remove();
+    });
+  }
+
+  function init() {
+    addFloatingLink();
+    showInitialWarning();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+  else init();
+})();
+
+// Signature commune du site.
+(function(){
+ function addCredit(){
+  if(document.getElementById('siteCredit'))return;
+  const footer=document.createElement('footer');footer.id='siteCredit';
+  footer.textContent='Tirbuce Beda dit le COCOTIER 0708190886';
+  document.body.appendChild(footer);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addCredit,{once:true});else addCredit();
+})();
+
+</script>
+</body></html>

@@ -1,0 +1,255 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MÉDECINE L1-L2-L3 — Cours</title><style>
+:root{
+  --ink:#173042;--muted:#647783;--paper:#fff;--bg:#edf4f6;--blue:#0c4a6e;
+  --teal:#0f766e;--line:#d7e4e8;--danger:#b42318;--shadow:0 22px 65px rgba(14,45,61,.16)
+}
+*{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100vh;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 8%,rgba(15,118,110,.14),transparent 34%),linear-gradient(145deg,#eaf3f6,#f8fbfc 55%,#e6f1ef)}
+button,input,a{font:inherit}.page{min-height:100vh;display:grid;place-items:center;padding:24px}.shell{width:min(960px,100%)}
+.brand{text-align:center;margin-bottom:20px}.brand-mark{display:grid;place-items:center;width:70px;height:70px;margin:0 auto 14px;border-radius:22px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-size:24px;font-weight:950;box-shadow:0 14px 30px rgba(12,74,110,.25)}
+.brand h1{margin:0;color:var(--blue);font-size:clamp(28px,5vw,46px)}.brand p{margin:8px auto 0;max-width:640px;color:var(--muted);line-height:1.55}
+.panel{background:rgba(255,255,255,.95);border:1px solid rgba(215,228,232,.95);border-radius:24px;box-shadow:var(--shadow);padding:clamp(20px,4vw,34px)}
+.login-panel{width:min(470px,100%);margin:auto}.field label{display:block;margin-bottom:8px;font-weight:850;color:#405866}.field input{width:100%;padding:14px 15px;border:1px solid #b9cbd2;border-radius:13px;outline:none;text-transform:uppercase;letter-spacing:.08em;font-weight:850}.field input:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(15,118,110,.13)}
+.primary{width:100%;margin-top:14px;padding:14px 16px;border:0;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-weight:900;cursor:pointer}.primary:hover{filter:brightness(1.04)}
+.error{min-height:22px;margin:10px 0 0;color:var(--danger);font-weight:750;font-size:13px}.help{margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.45}
+.hidden{display:none!important}.chooser-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.welcome h2{margin:0;color:var(--blue)}.welcome p{margin:6px 0 0;color:var(--muted)}
+.logout{border:1px solid var(--line);background:#fff;color:var(--danger);border-radius:11px;padding:10px 13px;font-weight:800;cursor:pointer}
+.site-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.site-card{display:flex;flex-direction:column;min-height:275px;padding:22px;border:1px solid var(--line);border-radius:19px;background:#fff;box-shadow:0 10px 30px rgba(23,48,66,.08)}
+.site-icon{display:grid;place-items:center;width:58px;height:58px;border-radius:17px;background:#e3f2f0;font-size:28px}.site-card:nth-child(2) .site-icon{background:#e7eef7}.site-card:nth-child(3) .site-icon{background:#fff0df}.site-card h3{margin:18px 0 8px;color:var(--blue);font-size:23px}.site-card p{margin:0;color:var(--muted);line-height:1.55;flex:1}.site-card ul{margin:16px 0 18px;padding-left:20px;color:#405866;line-height:1.55}.open-site{display:block;text-align:center;text-decoration:none;padding:13px 14px;border-radius:12px;background:var(--teal);color:#fff;font-weight:900}.site-card:nth-child(2) .open-site{background:var(--blue)}.site-card:nth-child(3) .open-site{background:#9a4e0b}
+.footer-note{text-align:center;color:var(--muted);font-size:12px;margin-top:17px}
+@media(max-width:980px){.site-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.page{padding:14px}.panel{border-radius:19px}.site-grid{grid-template-columns:1fr}.chooser-head{align-items:flex-start;flex-direction:column}.logout{width:100%}.site-card{min-height:250px}}
+
+.offline-status{display:inline-flex;align-items:center;justify-content:center;margin:10px auto 0!important;padding:7px 11px;border-radius:999px;background:#fff7d6;color:#765500;font-size:13px;font-weight:800;border:1px solid #efd678}
+.offline-status[data-state="ready"]{background:#e7f8ee;color:#12663d;border-color:#a8d8bc}
+.offline-status[data-state="error"]{background:#fff0ef;color:#95251d;border-color:#efb6b1}
+
+/* Choix des cinq portails : boutons directs, sans descriptions. */
+body:has(#chooserPanel:not(.hidden)) .brand{display:none}
+#chooserPanel{width:min(680px,100%);margin:auto;padding:24px}
+#chooserPanel .chooser-head{gap:12px;margin-bottom:20px}
+#chooserPanel .welcome{min-width:0}
+#chooserPanel .welcome h2{font-size:20px;overflow-wrap:anywhere;line-height:1.25}
+#chooserPanel .welcome p{font-size:14px}
+#chooserPanel .logout{flex-shrink:0;width:auto;font-size:12px;padding:9px 11px}
+#chooserPanel .site-grid{grid-template-columns:1fr;gap:12px}
+#chooserPanel .open-site{display:grid;grid-template-columns:30px 1fr 16px;align-items:center;gap:10px;min-height:62px;padding:13px 16px;border:1px solid transparent;font-size:16px;line-height:1.3;text-align:left;box-shadow:0 4px 12px rgba(12,74,110,.09)}
+#chooserPanel .open-site:nth-child(2){background:var(--blue)}
+#chooserPanel .open-site:nth-child(3){background:#9a4e0b}
+#chooserPanel .open-site:nth-child(4){background:#6550a0}
+#chooserPanel .open-site:nth-child(5){background:#17627d}
+#chooserPanel .open-site:hover{filter:brightness(1.1)}
+#chooserPanel .open-site:focus-visible{outline:3px solid #e6a221;outline-offset:3px}
+@media(max-width:720px){
+ body:has(#chooserPanel:not(.hidden)) .page{min-height:100svh;padding:12px}
+ #chooserPanel{padding:16px;border-radius:18px}
+ #chooserPanel .chooser-head{flex-direction:row;align-items:flex-start;margin-bottom:16px}
+ #chooserPanel .welcome h2{font-size:16px}
+ #chooserPanel .welcome p{font-size:12px}
+ #chooserPanel .site-grid{gap:10px}
+ #chooserPanel .open-site{font-size:14px;min-height:58px;padding:12px;gap:8px;grid-template-columns:25px 1fr 12px}
+ body:has(#chooserPanel:not(.hidden)) .legal-floating-link{right:8px;bottom:6px;padding:5px 8px;font-size:10px}
+}
+@media(max-height:500px) and (min-width:600px){
+ #chooserPanel{width:min(900px,100%);padding:16px}
+ #chooserPanel .site-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #chooserPanel .chooser-head{margin-bottom:12px}
+ #chooserPanel .open-site{min-height:54px;font-size:13px;padding:10px}
+}
+
+#chooserPanel .open-site:nth-child(6){background:#8a3658}
+@media(max-width:720px){#chooserPanel .open-site{min-height:52px;padding:10px 12px}#chooserPanel .site-grid{gap:8px}}
+
+</style><script>
+// Relais de session pour les sites ouverts depuis un dossier local (file://).
+(() => {
+  'use strict';
+  // Keep local-folder navigation usable when the browser denies Web Storage.
+  for (const storageName of ['localStorage', 'sessionStorage']) {
+    try {
+      const storage = window[storageName];
+      storage.setItem('__revision_probe__', '1');
+      storage.removeItem('__revision_probe__');
+    } catch (_) {
+      const values = new Map();
+      const storage = {
+        getItem: key => values.has(String(key)) ? values.get(String(key)) : null,
+        setItem: (key, value) => values.set(String(key), String(value)),
+        removeItem: key => values.delete(String(key)),
+        clear: () => values.clear(),
+        key: index => Array.from(values.keys())[index] || null,
+        get length() { return values.size; }
+      };
+      try { Object.defineProperty(window, storageName, { configurable: true, value: storage }); } catch (_) {}
+    }
+  }
+  const KEY = 'revision-hub-session-v1';
+  const PARAM = 'hubSession';
+  const parse = value => { try { return JSON.parse(value || 'null'); } catch (_) { return null; } };
+  function encode(session) {
+    try {
+      const json = JSON.stringify({ code: String(session?.code || ''), name: String(session?.name || 'Étudiant'), phone: String(session?.phone || ''), createdAt: Number(session?.createdAt) || Date.now() });
+      return btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+    } catch (_) { return ''; }
+  }
+  function decode(token) {
+    try {
+      const value = String(token || '').replace(/-/g, '+').replace(/_/g, '/');
+      const json = decodeURIComponent(escape(atob(value + '='.repeat((4 - value.length % 4) % 4))));
+      const session = JSON.parse(json);
+      return session?.code ? session : null;
+    } catch (_) { return null; }
+  }
+  const url = new URL(location.href);
+  const incomingToken = url.searchParams.get(PARAM) || '';
+  const incomingSession = decode(incomingToken);
+  if (incomingSession) { try { localStorage.setItem(KEY, JSON.stringify(incomingSession)); } catch (_) {} }
+  let stored = null;
+  try { stored = parse(localStorage.getItem(KEY)); } catch (_) {}
+  let session = incomingSession || stored;
+  const token = incomingToken || encode(session);
+  function getSession() {
+    try { return parse(localStorage.getItem(KEY)) || session; } catch (_) { return session; }
+  }
+  function withSession(raw) {
+    const target = new URL(raw, location.href);
+    const current = getSession();
+    if (current?.code) target.searchParams.set(PARAM, encode(current));
+    return target.href;
+  }
+  window.RevisionSessionBridge = Object.freeze({ getSession, encode, token,
+    clear: () => { session = null; },
+    navigate: raw => { location.href = withSession(raw); }
+  });
+  document.addEventListener('click', event => {
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    const raw = link.getAttribute('href') || '';
+    if (!raw || raw.startsWith('#')) return;
+    const target = new URL(raw, location.href);
+    if (target.origin !== location.origin || !target.pathname.endsWith('.html')) return;
+    link.href = withSession(raw);
+  }, true);
+  if (incomingToken && history.replaceState) {
+    url.searchParams.delete(PARAM);
+    try { history.replaceState(null, '', url.href); } catch (_) {}
+  }
+  function propagate() {
+    if (!token) return;
+    document.querySelectorAll('a[href]').forEach(link => {
+      const raw = link.getAttribute('href') || '';
+      if (!raw || raw.includes(PARAM + '=') || ['#', 'http:', 'https:', 'mailto:', 'tel:', 'javascript:'].some(prefix => raw.startsWith(prefix))) return;
+      const file = raw.split('#')[0].split('?')[0].toLowerCase();
+      if (!file.endsWith('.html')) return;
+      try { const target = new URL(raw, location.href); target.searchParams.set(PARAM, token); link.href = target.href; } catch (_) {}
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', propagate, { once: true }); else propagate();
+})();
+
+</script><style>.docs{max-width:1100px;margin:auto;padding:16px}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.tools a{padding:10px;background:#0f766e;color:white;border-radius:10px;text-decoration:none}iframe{width:100%;height:78vh;border:1px solid #d7e4e8;background:white;border-radius:12px}h1{font-size:24px}</style><style>
+/* Mention légale commune de la plateforme */
+.legal-floating-link{
+  position:fixed;right:14px;bottom:14px;z-index:9998;
+  display:inline-flex;align-items:center;gap:7px;padding:9px 12px;
+  border:1px solid rgba(12,74,110,.22);border-radius:999px;
+  background:rgba(255,255,255,.96);color:#0c4a6e;text-decoration:none;
+  font:800 12px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  box-shadow:0 8px 28px rgba(15,35,50,.18);backdrop-filter:blur(8px)
+}
+.legal-floating-link:hover,.legal-floating-link:focus-visible{background:#0c4a6e;color:#fff;outline:none}
+.legal-login-note{margin:12px 0 0;padding:11px 12px;border-radius:12px;background:#f6f9fb;border:1px solid #d7e4e8;color:#526875;font-size:12px;line-height:1.5;text-align:center}
+.legal-login-note a{color:#0c4a6e;font-weight:850}
+.legal-modal-backdrop{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:18px;background:rgba(8,28,40,.72);backdrop-filter:blur(5px)}
+.legal-modal{width:min(620px,100%);max-height:min(86vh,760px);overflow:auto;background:#fff;border-radius:22px;padding:24px;box-shadow:0 28px 90px rgba(0,0,0,.38);color:#173042;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.legal-modal h2{margin:0 0 10px;color:#0c4a6e;font-size:clamp(23px,4vw,32px)}
+.legal-modal p{margin:9px 0;color:#526875;line-height:1.6}
+.legal-modal strong{color:#173042}
+.legal-modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.legal-modal-actions a,.legal-modal-actions button{flex:1 1 190px;border-radius:12px;padding:12px 14px;text-align:center;font-weight:900;cursor:pointer;text-decoration:none}
+.legal-modal-actions a{border:1px solid #c8d8df;background:#fff;color:#0c4a6e}
+.legal-modal-actions button{border:0;background:linear-gradient(135deg,#0c4a6e,#0f766e);color:#fff}
+.legal-page-body{margin:0;min-height:100vh;background:linear-gradient(145deg,#eaf3f6,#f8fbfc 55%,#e6f1ef);color:#173042;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.legal-page-wrap{width:min(920px,calc(100% - 28px));margin:28px auto;padding:clamp(20px,4vw,42px);background:#fff;border:1px solid #d7e4e8;border-radius:24px;box-shadow:0 22px 65px rgba(14,45,61,.16)}
+.legal-page-wrap h1{margin:0 0 8px;color:#0c4a6e;font-size:clamp(28px,5vw,46px)}
+.legal-page-wrap h2{margin:28px 0 8px;color:#0f766e;font-size:22px}
+.legal-page-wrap p,.legal-page-wrap li{line-height:1.7;color:#405866}
+.legal-page-wrap .legal-highlight{padding:15px 17px;border-left:5px solid #0f766e;border-radius:12px;background:#eef8f6;color:#244c4a;font-weight:700}
+.legal-page-wrap .legal-warning{padding:15px 17px;border-left:5px solid #a45b08;border-radius:12px;background:#fff7e8;color:#6b440f}
+.legal-page-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.legal-page-actions a{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:900}
+.legal-page-actions .back{background:#0c4a6e;color:#fff}.legal-page-actions .pdf{background:#fff;border:1px solid #b9cbd2;color:#0f766e}
+.legal-small{font-size:12px;color:#71828c!important;margin-top:28px!important}
+@media(max-width:600px){.legal-floating-link{right:8px;bottom:8px;padding:8px 10px;font-size:11px}.legal-modal{padding:19px;border-radius:18px}.legal-page-wrap{margin:14px auto;border-radius:18px}}
+
+#siteCredit{padding:12px 16px 44px;text-align:center;color:#0c4a6e;font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;overflow-wrap:anywhere}
+body:has(#chooserPanel:not(.hidden)) .page{min-height:calc(100svh - 56px);padding-top:12px;padding-bottom:8px}
+body:has(#chooserPanel:not(.hidden)) #siteCredit{padding:4px 12px 30px;font-size:11px}
+@media print{#siteCredit{padding:10px;color:#000}}
+
+</style></head><body><main class="docs"><a href="portail.html?portal=medecine">← Cours et Quiz</a><h1>MÉDECINE L1-L2-L3</h1><p>Recueil corrigé des 706 questions fourni pour la révision.</p><nav class="tools"><a href="medecine-quiz.html">Quiz</a><a href="document-medecine.pdf" target="_blank" rel="noopener">Ouvrir le PDF</a><a href="document-medecine.pdf" download>Télécharger le PDF</a></nav><iframe title="Recueil de médecine" src="document-medecine.pdf"></iframe></main><script>
+(() => {
+  'use strict';
+  const LEGAL_ACK_KEY = 'revision-l3-legal-ack-v1';
+
+  function addFloatingLink() {
+    if (document.body?.classList.contains('legal-page-body')) return;
+    if (document.querySelector('.legal-floating-link')) return;
+    const link = document.createElement('a');
+    link.className = 'legal-floating-link';
+    link.href = 'droits-auteur.html';
+    link.setAttribute('aria-label', "Consulter les droits d’auteur et l’avertissement");
+    link.innerHTML = '🛡️ Droits d’auteur';
+    document.body.appendChild(link);
+  }
+
+  function showInitialWarning() {
+    const path = (location.pathname || '').toLowerCase();
+    const isPortal = path.endsWith('/') || path.endsWith('/index.html') || path === '';
+    if (!isPortal || localStorage.getItem(LEGAL_ACK_KEY) === '1') return;
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'legal-modal-backdrop';
+    backdrop.setAttribute('role', 'dialog');
+    backdrop.setAttribute('aria-modal', 'true');
+    backdrop.setAttribute('aria-labelledby', 'legalModalTitle');
+    backdrop.innerHTML = `
+      <section class="legal-modal">
+        <h2 id="legalModalTitle">Droits d’auteur et avertissement</h2>
+        <p><strong>Cette plateforme est destinée uniquement à la révision éducative et pédagogique.</strong> Elle ne doit pas être revendue ni exploitée à des fins commerciales.</p>
+        <p>Les sujets, exercices, cours, images et fichiers PDF appartiennent à leurs auteurs, enseignants, établissements, éditeurs ou propriétaires respectifs. Toute demande justifiée de retrait sera prise en compte.</p>
+        <p>La structure, l’interface, le code original, l’organisation et les adaptations propres à la plateforme sont protégés. Leur copie, suppression des mentions, revente ou redistribution non autorisée est interdite.</p>
+        <div class="legal-modal-actions">
+          <a href="droits-auteur.html">Lire le texte complet</a>
+          <button type="button" id="legalAcceptButton">J’ai compris</button>
+        </div>
+      </section>`;
+    document.body.appendChild(backdrop);
+    const button = document.getElementById('legalAcceptButton');
+    button?.focus();
+    button?.addEventListener('click', () => {
+      localStorage.setItem(LEGAL_ACK_KEY, '1');
+      backdrop.remove();
+    });
+  }
+
+  function init() {
+    addFloatingLink();
+    showInitialWarning();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+  else init();
+})();
+
+// Signature commune du site.
+(function(){
+ function addCredit(){
+  if(document.getElementById('siteCredit'))return;
+  const footer=document.createElement('footer');footer.id='siteCredit';
+  footer.textContent='Tirbuce Beda dit le COCOTIER 0708190886';
+  document.body.appendChild(footer);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addCredit,{once:true});else addCredit();
+})();
+
+</script></body></html>
