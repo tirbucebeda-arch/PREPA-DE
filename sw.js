@@ -1,4 +1,4 @@
-const CACHE_NAME = 'revision-l3-hebergement-compact-v52';
+const CACHE_NAME = 'revision-l3-comptes-recuperation-v54';
 const APP_FILES = [
   "./",
   "./.nojekyll",
