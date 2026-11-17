@@ -1,7 +1,14 @@
-const CACHE_NAME = 'revision-l3-comptes-recuperation-v54';
+const CACHE_NAME = 'revision-deb-quiz-8-antennes-connexion-v9';
 const APP_FILES = [
+  "./j1-chirurgie-corrige.pdf",
+  "./j1-gyneco-corrige.pdf",
+  "./j1-medecine-corrige.pdf",
+  "./j1-pediatrie-corrige.pdf",
+  "./j1-ssr-corrige.pdf",
+  "./j1-sante-corrige.pdf",
+
+  "./Recueil_Corriges_DEB_2026_8_Antennes.pdf",
   "./",
-  "./.nojekyll",
   "./chirurgie-quiz.html",
   "./chirurgie.html",
   "./de-blanc-2026-agboville-ide.pdf",
@@ -38,7 +45,13 @@ const APP_FILES = [
   "./portail.html",
   "./quiz-promo-p8.html",
   "./sante-publique-quiz.html",
-  "./sante-publique.html"
+  "./sante-publique.html",
+  "./chirurgie-abengourou-2026-corrige.pdf",
+  "./medecine-abengourou-2026-corrige.pdf",
+  "./ssr-pf-gu-genre-abengourou-2026-corrige.pdf",
+  "./gynecologie-obstetrique-abengourou-2026-corrige.pdf",
+  "./pediatrie-abengourou-2026-corrige.pdf",
+  "./sante-publique-abengourou-2026-corrige.pdf"
 ];
 
 async function cacheAll(progressClient) {
@@ -47,6 +60,7 @@ async function cacheAll(progressClient) {
   for (const url of APP_FILES) {
     const request = new Request(url, { cache: 'reload' });
     const response = await fetch(request);
+    if (!response.ok && url.endsWith(".pdf")) continue;
     if (!response.ok) throw new Error(`Fichier hors ligne introuvable : ${url}`);
     await cache.put(request, response);
     done += 1;
@@ -93,7 +107,7 @@ async function networkFirst(request) {
     const cached = await cache.match(request, { ignoreSearch: true });
     if (cached) return cached;
     if (request.mode === 'navigate') {
-      return (await cache.match('./index.html')) || new Response('Plateforme indisponible hors connexion.', {
+      return new Response('Cette page est indisponible hors connexion. Reconnectez-vous puis rechargez la page.', {
         status: 503,
         headers: { 'Content-Type': 'text/plain; charset=utf-8' }
       });
@@ -119,6 +133,7 @@ self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   const requestURL = new URL(event.request.url);
   if (requestURL.origin !== self.location.origin) return;
+  if (event.request.headers.has('Range')) return;
   event.respondWith(mustUseNetworkFirst(event.request)
     ? networkFirst(event.request)
     : cacheFirst(event.request));
