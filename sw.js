@@ -1,4 +1,4 @@
-const CACHE_NAME = 'revision-deb-quiz-8-antennes-connexion-v9';
+const CACHE_NAME = 'revision-deb-quiz-8-antennes-comptes-v11';
 const APP_FILES = [
   "./j1-chirurgie-corrige.pdf",
   "./j1-gyneco-corrige.pdf",
