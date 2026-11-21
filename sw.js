@@ -1,5 +1,14 @@
-const CACHE_NAME = 'revision-deb-quiz-8-antennes-j4-comptes-v16';
+const CACHE_NAME = 'revision-deb-quiz-8-antennes-j5-comptes-v18';
 const APP_FILES = [
+ "./j5-chirurgie-ide.pdf",
+ "./j5-medecine-ide.pdf",
+ "./j5-pediatrie-ide.pdf",
+ "./j5-santepublique-ide.pdf",
+ "./j5-gynecologieobstetrique-sfm.pdf",
+ "./j5-pediatrie-sfm.pdf",
+ "./j5-santepublique-sfm.pdf",
+ "./j5-ssrpf-sfm.pdf",
+
  "./j4-chirurgie-corrige.pdf",
  "./j4-pediatrie-corrige.pdf",
  "./j4-ssr-corrige.pdf",
